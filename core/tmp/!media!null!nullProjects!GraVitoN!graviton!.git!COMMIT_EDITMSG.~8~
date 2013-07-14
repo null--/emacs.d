@@ -1,0 +1,16 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch port
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    code/core/aocinfo.h
+#	modified:   code/core/luaviton.hpp
+#	deleted:    code/core/luaviton.hpp.gch
+#	modified:   code/graviton.hpp
+#	deleted:    code/infect/spread.hpp
+#	deleted:    samples/misc/luaviton_test/build.sh
+#	renamed:    samples/misc/luaviton_test/lua.cpp -> samples/misc/luaviton_test/luaviton.cpp
+#	new file:   samples/misc/luaviton_test/luaviton.pro
+#

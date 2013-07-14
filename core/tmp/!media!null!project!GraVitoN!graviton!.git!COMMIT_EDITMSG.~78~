@@ -1,0 +1,25 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch break_through
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   ssl_client.cpp
+#	new file:   ../../../../code/core/ssl_client.hpp
+#	new file:   ../../../../code/core/ssl_socket.hpp
+#	modified:   ../../../../code/core/tcp_client.hpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	a.out
+#	ssl_client.exe
+#	ssl_client.exp
+#	ssl_client.lib
+#	ssl_client.obj
+#	tcp_client.exe
+#	tcp_client.obj
+#	../thread/a.out
+#	../thread/thread.exe
+#	../thread/thread.obj

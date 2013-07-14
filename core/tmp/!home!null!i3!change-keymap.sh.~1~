@@ -1,0 +1,27 @@
+#!/bin/bash
+
+setxkbmap -print | grep -q '+us+'
+isus=$?
+#setxkbmap -print | grep -q '+de+'
+#isde=$?
+setxkbmap -print | grep -q '+ru+'
+isru=$?
+setxkbmap -print | grep -q '+ir+'
+isir=$?
+
+# echo $isus $isde $isir
+
+if [ $isus -eq 0 ]	
+then
+    # echo 'usa'
+	setxkbmap -rules evdev -model pc105 -layout ru
+elif [ $isru -eq 0 ]
+then
+    # echo 'russian'
+	setxkbmap -rules evdev -model pc105 -layout ir
+elif [ $isir -eq 0 ]
+then
+    # echo 'iran'
+	setxkbmap -rules evdev -model pc105 -layout us
+fi
+

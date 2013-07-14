@@ -1,0 +1,173 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+#include "graver.hpp"
+
+#include <external/rapidxml/rapidxml.hpp>
+
+#include <iostream>
+#include <cstdlib>
+#include <cstdio>
+using namespace std;
+using namespace rapidxml;
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+struct PROJECT
+{
+    bool unsaved_proj = false;
+    string path;
+} glob_proj;
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+struct CONF
+{
+    string library = "library.conf";
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void printError(const int id)
+{
+    cout << "[ERROR] ";
+    
+    switch(id)
+    {
+    case ERR_INV_VAL:
+        cout << "That fuckin' value is bloody wrong!";
+        break;
+    case ERR_UNK_CMD:
+        cout << "What the fuck?!";
+        break;
+    case ERR_INV_FILE:
+        cout << "Give me a fuckin' valid file name";
+        break;
+    default:
+        cout << "Speak english, man!";
+        break;
+    }
+
+    cout << "" << endl;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doExit()
+{
+    if( glob_proj.unsaved_proj )
+    {
+        string dec;
+        cout << "There is an unsaved project, Are you drunk? (yes/no)" << endl;
+        cin >> dec;
+
+        if( dec != "yes" )
+        {
+            cout << "OK! You're not drunk!" << endl;
+            return;
+        }
+    }
+
+    cout << endl ;
+    cout << "[ I used to roll the dice, feel the fear in my enemy's eyes... ]" << endl;
+
+    exit(0);
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doHelp()
+{
+    cout << CMD[ CMD_HELP ]     << "\t\t\t: Print help banner"                  << endl;
+    cout << CMD[ CMD_EXIT ]     << "\t\t\t: Exit"                               << endl;
+    cout << CMD[ CMD_NEW  ]     << "\t\t\t: Create new project"                 << endl;
+    cout << CMD[ CMD_LOAD ]     << "\t\t\t: Load an exsisting project"          << endl;
+    cout << CMD[ CMD_SAVE ]     << "\t\t\t: Save project"                       << endl;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doLoad()
+{
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doSave()
+{
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doNew()
+{
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doBuild()
+{
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void doBuildDep()
+{
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void parse(const string &input)
+{
+    bool valid = false;
+    int cmd;
+    for(cmd=0; cmd<N_CMD; ++cmd)
+    {
+        if( input == CMD[cmd] )
+        {
+            valid = true;
+            break;
+        }
+    }
+    
+    if(!valid)
+    {
+        printError(ERR_UNK_CMD);
+        return;
+    }
+
+    switch (cmd)
+    {
+    case CMD_HELP:
+        doHelp();
+        break;
+    case CMD_NEW:
+        doNew();
+        break;
+    case CMD_SAVE:
+        doSave();
+        break;
+    case CMD_BUILD:
+        doBuild();
+        break;
+    case CMD_LOAD:
+        doLoad();
+        break;
+    case CMD_BUILD_DEP:
+        doBuildDep();
+        break;
+    default: /// It's definitely CMD_EXIT
+        doExit();
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+void init()
+{
+    
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+int main()
+{
+    string input;
+
+    cout << BANNER << endl;
+
+    init();
+
+    cout << "[ There are rules, to be broken... ]" << endl;
+    
+    while( (cout << SIGN, getline(cin, input)) )
+    {
+        parse(input);
+    }
+    
+    return 0;
+}

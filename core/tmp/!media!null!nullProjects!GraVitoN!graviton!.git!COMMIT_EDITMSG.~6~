@@ -1,0 +1,83 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch port
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   GraVitoN.png
+#	new file:   code/COPYING
+#	new file:   code/ai/ai.hpp
+#	new file:   code/ai/backdoor_sample.hpp
+#	new file:   code/ai/virus_sample.hpp
+#	new file:   code/core/aocinfo.hpp
+#	new file:   code/core/logger.hpp
+#	new file:   code/core/luaviton.hpp
+#	new file:   code/core/multitask.hpp
+#	new file:   code/core/socket.hpp
+#	new file:   code/core/tcp_client.hpp
+#	new file:   code/core/tcp_server.hpp
+#	new file:   code/core/thread.hpp
+#	new file:   code/core/udp_client.hpp
+#	new file:   code/graviton.hpp
+#	new file:   code/infect/generic/endoffile_decom_linux64.hpp
+#	new file:   code/infect/generic/endoffile_decom_osx32.hpp
+#	new file:   code/infect/generic/endoffile_decom_win32.hpp
+#	new file:   code/infect/generic/endoffile_technique.hpp
+#	new file:   code/infect/spread.hpp
+#	new file:   code/malkit/generic/reporter_text.hpp
+#	new file:   code/malkit/malkit.hpp
+#	new file:   code/payload/linux/msf_shell_bind_64.hpp
+#	new file:   code/payload/linux/msf_shell_reverse_64.hpp
+#	new file:   code/payload/osx/dos_32.hpp
+#	new file:   code/payload/osx/msf_shell_bind_32.hpp
+#	new file:   code/payload/payload.hpp
+#	new file:   code/payload/sample.hpp
+#	new file:   code/payload/win/meterpreter_bind_32.hpp
+#	new file:   code/payload/win/meterpreter_bind_kasper_32.hpp
+#	new file:   code/payload/win/meterpreter_reverse_32.hpp
+#	new file:   code/utils/files.hpp
+#	new file:   code/utils/optparser.hpp
+#	new file:   code/utils/utils.hpp
+#	new file:   samples/backdoor/infector_endoffile/infector.cpp
+#	new file:   samples/backdoor/sample_trojan_linux64/build.sh
+#	new file:   samples/backdoor/sample_trojan_linux64/graviton.cpp
+#	new file:   samples/backdoor/sample_trojan_osx32/build.sh
+#	new file:   samples/backdoor/sample_trojan_osx32/graviton.cpp
+#	new file:   samples/backdoor/sample_trojan_win32/graviton.cpp
+#	new file:   samples/backdoor/sample_trojan_win32_kasper/graviton.cpp
+#	new file:   samples/misc/file_to_char_array/filetochararr.cpp
+#	new file:   samples/misc/file_to_char_array/payload.bin
+#	new file:   samples/misc/file_to_char_array/payload.cpp
+#	new file:   samples/misc/luaviton_test/lua.cpp
+#	new file:   samples/misc/luaviton_test/test.lua
+#	new file:   samples/misc/multitask/parajob.cpp
+#	new file:   samples/misc/reporter_text/reporter.cpp
+#	new file:   samples/misc/tcp_client/tcp_client.cpp
+#	new file:   samples/misc/tcp_server/tcp_server.cpp
+#	new file:   samples/misc/thread/thread.cpp
+#	new file:   samples/misc/ting_test/ting_client/client.cpp
+#	new file:   samples/misc/ting_test/ting_server/server.cpp
+#	new file:   samples/misc/ting_test/ting_thread/thread.cpp
+#	new file:   samples/misc/udp_client/udpclient.cpp
+#	new file:   samples/virus/sample_crossos_virus_thc12/gen_trojan_linux64.cpp
+#	new file:   samples/virus/sample_crossos_virus_thc12/gen_virus_osx32_win32.cpp
+#	new file:   samples/virus/sample_crossos_virus_thc12/gen_virus_win32_linux64.cpp
+#	new file:   samples/virus/sample_crossos_virus_thc12/readme
+#	new file:   samples/virus/sample_crossos_virus_thc12/target_linux64.cpp
+#	new file:   samples/virus/sample_crossos_virus_thc12/target_osx32.cpp
+#	new file:   samples/virus/sample_crossos_virus_thc12/target_win32.cpp
+#	new file:   samples/virus/sample_spread/graviton.cpp
+#	new file:   samples/virus/sample_virus_linux64/graviton.cpp
+#	new file:   samples/virus/sample_virus_osx32/graviton.cpp
+#	new file:   samples/virus/sample_virus_win32/graviton.cpp
+#	new file:   samples/virus/spread_endoffile_decompressor/linux64/decompressor.cpp
+#	new file:   samples/virus/spread_endoffile_decompressor/osx32/decompressor.cpp
+#	new file:   samples/virus/spread_endoffile_decompressor/win32/decompressor.cpp
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    code/core/aocinfo.h
+#

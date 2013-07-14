@@ -1,0 +1,22 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 9 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   the-art-of-mem.cpp
+#	modified:   ../../../../code/core/memory.hpp
+#	modified:   ../../../../code/utils/socks5_client.hpp
+#	modified:   ../../../../code/utils/xmldoc.hpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	the-art-of-mem
+#	../net/a.out
+#	../xmldoc/a.out
+#	../xmldoc/example2.xml

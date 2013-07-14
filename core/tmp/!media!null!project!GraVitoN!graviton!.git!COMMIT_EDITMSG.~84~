@@ -1,0 +1,20 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 3 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   component_parallel.hpp
+#	new file:   regex.hpp
+#	modified:   xmldoc.hpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../../bin/demo/misc/socket/a.out
+#	../../bin/demo/misc/xmldoc/a.out
+#	../../bin/demo/misc/xmldoc/example2.xml

@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int v;
+    char image[64][64];
+    char pat[8] = {' ', '.', '\'', '-', '+', 'o', '0', 'X' }
+
+    for(int i=0; i<64; ++i)
+        for(int j=0; j<64; ++j)
+        {
+            cin >> v;
+            image[i][j] = pat[v/8];
+        }
+    for(int i=0; i<64; ++i, cout<<endl)
+        for(int j=0; j<64; ++j)
+            cout << image[i][j];
+    
+    return 0;
+}

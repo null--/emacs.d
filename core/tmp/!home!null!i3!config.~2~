@@ -1,0 +1,241 @@
+# _null_ i3wm Configuration
+# This is a X-based configuration for i3wm
+
+# ----- MODKEY ----- #
+set $alt Mod1
+set $super Mod4
+set $mod Mod1
+floating_modifier $mod
+
+# ----- SETTINGS ----- #
+exec xset b off
+
+# ----- GENERAL ----- #
+# - Background
+# howto: run 'nitrogen --save' to set the background
+exec nitrogen --restore
+
+# - Font
+font xft:Droid Sans Mono:antialias=true:hinting=true 8
+
+# - Disable Mouse Focus
+focus_follows_mouse no
+workspace_auto_back_and_forth yes
+
+# - Workspace name
+set $w0 0
+set $w1 1
+set $w2 2
+set $w3 3
+set $w4 4
+set $w5 5
+set $w6 6
+set $w7 7
+set $w8 8
+set $w9 9
+
+# ----- BIND KEY ----- #
+# - Test message
+bindsym $mod+Ctrl+t exec "i3-nagbar -x -t warning -m 'TEST' -b 'OK' 'i3-msg exec terminator'"
+
+# - Powert Control
+# - - Poweroff
+bindsym $mod+Ctrl+p exec "i3-nagbar -t error -m 'Confirm Poweroff Action:' -b 'PROCEED' 'exec dbus-send --system --print-reply --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement.Shutdown'"
+# - - Reboot
+bindsym $mod+Ctrl+r exec "i3-nagbar -t error -m 'Confirm Reboot Action:' -b 'PROCEED' 'exec dbus-send --system --print-reply --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement.Reboot'"
+# - - Suspend
+bindsym $mod+Ctrl+s exec "i3-nagbar -x -t error -m 'Confirm Suspend Action:' -b 'PROCEED' 'exec dbus-send --system --print-reply --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement.Suspend int32:1'"
+# - - Hibernate
+bindsym $mod+Ctrl+h exec "i3-nagbar -x -t error -m 'Confirm Hibernate Action:' -b 'PROCEED' 'exec dbus-send --system --print-reply --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.SystemPowerManagement.Hibernate'"
+
+# - Volume Settings
+bindsym XF86AudioRaiseVolume exec aumix -v +5
+bindsym XF86AudioLowerVolume exec aumix -v -5
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# - Print Screen
+# - - Active Workspace
+bindsym Print exec scrot -e 'mv $f ~/Pictures && gpicview ~/Pictures/$f'
+# - - Active Window
+bindsym $alt+Print exec scrot -s -e 'mv $f ~/Pictures && gpicview ~/Pictures/$f'
+
+# - Invert Screen
+bindsym $mod+Shift+i exec xcalib -i -a
+
+# - standard
+bindsym $mod+Escape exec i3-input
+bindsym $alt+F4 kill
+
+# - Change KBD Layout
+bindsym $mod+F1 exec --no-startup-id ~/i3/change-keymap.sh
+
+# - Lock screen
+bindsym $alt+Ctrl+l exec xscreensaver-command -l
+
+# - start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# - kill focused window
+bindsym $mod+Shift+q kill
+
+# - start program
+bindsym $mod+Shift+d exec dmenu_run -sb black -sf cyan -nf cyan -nb black -b -fn "Monospace-8" -p "Fire: "
+
+# - file manager
+bindsym $mod+Shift+o exec pcmanfm 
+
+# - emacs client
+bindsym $mod+e exec emacsclient -c
+
+# - change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# - alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# - move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# - alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# - split in horizontal orientation
+bindsym $mod+Shift+h split h
+
+# - split in vertical orientation
+bindsym $mod+Shift+v split v
+
+# - enter fullscreen mode for the focused container
+bindsym $mod+Shift+f fullscreen
+
+# - change container layout (stacked, tabbed, toggle split)
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+e layout toggle split
+
+# - toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# - change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# - focus the parent container
+bindsym $mod+Shift+a focus parent
+
+# - focus the child container
+bindsym $mod+Shift+c focus child
+
+# - switch to workspace
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+bindsym $mod+6 workspace $w6
+bindsym $mod+7 workspace $w7
+bindsym $mod+8 workspace $w8
+bindsym $mod+9 workspace $w9
+bindsym $mod+0 workspace $w0
+
+# - move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+6 move container to workspace $w6
+bindsym $mod+Shift+7 move container to workspace $w7
+bindsym $mod+Shift+8 move container to workspace $w8
+bindsym $mod+Shift+9 move container to workspace $w9
+bindsym $mod+Shift+0 move container to workspace $w0
+
+
+# - reload the configuration file
+# bindsym $mod+Shift+c reload
+
+# - restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# - exit i3 (logs you out of your X session)
+bindsym $mod+Ctrl+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'exec ~/i3/exit.sh && i3-msg exit'"
+
+# - resize window (you can also use the mouse for that)
+mode "resize" 
+{
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# ----- BAR ----- #
+bar 
+{
+	# output				LVDS-0
+	position 			top
+	
+	#status_command	i3status -c ~/i3/i3status.conf | dzen2 -ta c -sa c -w $status_width -x $status_x # -fn 'DejaVu Sans Mono-9'
+	status_command	~/i3/status.sh
+
+	# mode				hide
+	tray_output			primary
+	# tray_output			none
+
+	colors {
+		background #000000
+		statusline #ffffff
+
+		focused_workspace  #FFA000 #2B6473
+		active_workspace   #FFA000 #004050
+		inactive_workspace #ffffff #004050
+		urgent_workspace   #ffffff #900000
+	}
+}
+
+# ----- COLORS ----- #
+# class                 border  backgr. text
+client.focused           #2B6473 #2B6473 #FFA000
+client.focused_inactive  #004050 #004050 #FFA000
+client.unfocused         #004050 #004050 #cccccc 
+client.urgent            #900000 #900000 #ffffff
+client.background        #000000
+
+# ----- STARTUP ------ #
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id xscreensaver -no-splash
+exec --no-startup-id wicd-gtk -t
+exec --no-startup-id goldendict
+exec --no-startup-id blueman-applet
+exec --no-startup-id disper-indicator
+exec --no-startup-id jupiter
+exec --no-startup-id tomboy --panel-applet
+exec --no-startup-id glipper

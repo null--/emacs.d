@@ -1,0 +1,15 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   ssl_client.cpp
+#	modified:   ../../../../code/core/socket.hpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	a.out
+#	../../../../code/core/udp_socket.hpp

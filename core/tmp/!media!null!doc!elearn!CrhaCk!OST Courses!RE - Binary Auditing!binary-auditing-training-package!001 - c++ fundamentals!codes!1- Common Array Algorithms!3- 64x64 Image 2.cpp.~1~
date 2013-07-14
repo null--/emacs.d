@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int image[64][64];
+    int pw = 0;
+    for(int i=0; i<8; ++i, pw += 8)
+        for(int j=0; j<8; ++j)
+            for(int k=0; k<64; ++k)
+                image[i*8+j][k] = pw;
+
+    for(int i=0; i<64; ++i, cout<<endl)
+        for(int j=0; j<64; ++j)
+            cout << image[i][j];
+    
+    return 0;
+}

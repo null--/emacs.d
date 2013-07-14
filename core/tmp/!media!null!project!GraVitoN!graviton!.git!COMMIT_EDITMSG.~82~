@@ -1,0 +1,23 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   ssl_server.cpp
+#	modified:   tcp_server.cpp
+#	new file:   udp_socket.cpp
+#	modified:   ../../../../code/core/memory.hpp
+#	modified:   ../../../../code/core/ssl_client.hpp
+#	modified:   ../../../../code/core/ssl_server.hpp
+#	modified:   ../../../../code/core/tcp_client.hpp
+#	modified:   ../../../../code/core/tcp_server.hpp
+#	new file:   ../../../../code/core/udp_socket.hpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	a.out

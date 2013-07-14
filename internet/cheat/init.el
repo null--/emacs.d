@@ -1,0 +1,1 @@
+(autoload 'cheat "cheat" "Provide a handy interface to cheat." t)

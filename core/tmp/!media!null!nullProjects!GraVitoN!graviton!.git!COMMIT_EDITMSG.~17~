@@ -1,0 +1,951 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   code/external/VERSIONS
+#	new file:   code/external/libtomcrypt/Doxyfile
+#	new file:   code/external/libtomcrypt/LICENSE
+#	new file:   code/external/libtomcrypt/README
+#	new file:   code/external/libtomcrypt/TODO
+#	new file:   code/external/libtomcrypt/build.sh
+#	new file:   code/external/libtomcrypt/changes
+#	new file:   code/external/libtomcrypt/crypt.tex
+#	new file:   code/external/libtomcrypt/filter.pl
+#	new file:   code/external/libtomcrypt/fixupind.pl
+#	new file:   code/external/libtomcrypt/genlist.sh
+#	new file:   code/external/libtomcrypt/libtomcrypt.dsp
+#	new file:   code/external/libtomcrypt/makefile
+#	new file:   code/external/libtomcrypt/makefile.icc
+#	new file:   code/external/libtomcrypt/makefile.msvc
+#	new file:   code/external/libtomcrypt/makefile.shared
+#	new file:   code/external/libtomcrypt/makefile.unix
+#	new file:   code/external/libtomcrypt/mess.sh
+#	new file:   code/external/libtomcrypt/parsenames.pl
+#	new file:   code/external/libtomcrypt/run.sh
+#	new file:   code/external/libtomcrypt/src/ciphers/aes/aes.c
+#	new file:   code/external/libtomcrypt/src/ciphers/aes/aes_tab.c
+#	new file:   code/external/libtomcrypt/src/ciphers/anubis.c
+#	new file:   code/external/libtomcrypt/src/ciphers/blowfish.c
+#	new file:   code/external/libtomcrypt/src/ciphers/cast5.c
+#	new file:   code/external/libtomcrypt/src/ciphers/des.c
+#	new file:   code/external/libtomcrypt/src/ciphers/kasumi.c
+#	new file:   code/external/libtomcrypt/src/ciphers/khazad.c
+#	new file:   code/external/libtomcrypt/src/ciphers/kseed.c
+#	new file:   code/external/libtomcrypt/src/ciphers/multi2.c
+#	new file:   code/external/libtomcrypt/src/ciphers/noekeon.c
+#	new file:   code/external/libtomcrypt/src/ciphers/rc2.c
+#	new file:   code/external/libtomcrypt/src/ciphers/rc5.c
+#	new file:   code/external/libtomcrypt/src/ciphers/rc6.c
+#	new file:   code/external/libtomcrypt/src/ciphers/safer/safer.c
+#	new file:   code/external/libtomcrypt/src/ciphers/safer/safer_tab.c
+#	new file:   code/external/libtomcrypt/src/ciphers/safer/saferp.c
+#	new file:   code/external/libtomcrypt/src/ciphers/skipjack.c
+#	new file:   code/external/libtomcrypt/src/ciphers/twofish/twofish.c
+#	new file:   code/external/libtomcrypt/src/ciphers/twofish/twofish_tab.c
+#	new file:   code/external/libtomcrypt/src/ciphers/xtea.c
+#	new file:   code/external/libtomcrypt/src/encauth/ccm/ccm_memory.c
+#	new file:   code/external/libtomcrypt/src/encauth/ccm/ccm_test.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_addheader.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_decrypt.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_decrypt_verify_memory.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_done.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_encrypt.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_encrypt_authenticate_memory.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_init.c
+#	new file:   code/external/libtomcrypt/src/encauth/eax/eax_test.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_add_aad.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_add_iv.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_done.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_gf_mult.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_init.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_memory.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_mult_h.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_process.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_reset.c
+#	new file:   code/external/libtomcrypt/src/encauth/gcm/gcm_test.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_decrypt.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_decrypt_verify_memory.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_done_decrypt.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_done_encrypt.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_encrypt.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_encrypt_authenticate_memory.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_init.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_ntz.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_shift_xor.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/ocb_test.c
+#	new file:   code/external/libtomcrypt/src/encauth/ocb/s_ocb_done.c
+#	new file:   code/external/libtomcrypt/src/hashes/chc/chc.c
+#	new file:   code/external/libtomcrypt/src/hashes/helper/hash_file.c
+#	new file:   code/external/libtomcrypt/src/hashes/helper/hash_filehandle.c
+#	new file:   code/external/libtomcrypt/src/hashes/helper/hash_memory.c
+#	new file:   code/external/libtomcrypt/src/hashes/helper/hash_memory_multi.c
+#	new file:   code/external/libtomcrypt/src/hashes/md2.c
+#	new file:   code/external/libtomcrypt/src/hashes/md4.c
+#	new file:   code/external/libtomcrypt/src/hashes/md5.c
+#	new file:   code/external/libtomcrypt/src/hashes/rmd128.c
+#	new file:   code/external/libtomcrypt/src/hashes/rmd160.c
+#	new file:   code/external/libtomcrypt/src/hashes/rmd256.c
+#	new file:   code/external/libtomcrypt/src/hashes/rmd320.c
+#	new file:   code/external/libtomcrypt/src/hashes/sha1.c
+#	new file:   code/external/libtomcrypt/src/hashes/sha2/sha224.c
+#	new file:   code/external/libtomcrypt/src/hashes/sha2/sha256.c
+#	new file:   code/external/libtomcrypt/src/hashes/sha2/sha384.c
+#	new file:   code/external/libtomcrypt/src/hashes/sha2/sha512.c
+#	new file:   code/external/libtomcrypt/src/hashes/tiger.c
+#	new file:   code/external/libtomcrypt/src/hashes/whirl/whirl.c
+#	new file:   code/external/libtomcrypt/src/hashes/whirl/whirltab.c
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_argchk.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_cfg.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_cipher.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_custom.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_hash.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_mac.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_macros.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_math.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_misc.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_pk.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_pkcs.h
+#	new file:   code/external/libtomcrypt/src/headers/tomcrypt_prng.h
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_done.c
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_file.c
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_init.c
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_memory.c
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_memory_multi.c
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_process.c
+#	new file:   code/external/libtomcrypt/src/mac/f9/f9_test.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_done.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_file.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_init.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_memory.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_memory_multi.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_process.c
+#	new file:   code/external/libtomcrypt/src/mac/hmac/hmac_test.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_done.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_file.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_init.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_memory.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_memory_multi.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_process.c
+#	new file:   code/external/libtomcrypt/src/mac/omac/omac_test.c
+#	new file:   code/external/libtomcrypt/src/mac/pelican/pelican.c
+#	new file:   code/external/libtomcrypt/src/mac/pelican/pelican_memory.c
+#	new file:   code/external/libtomcrypt/src/mac/pelican/pelican_test.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_done.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_file.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_init.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_memory.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_memory_multi.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_ntz.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_process.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_shift_xor.c
+#	new file:   code/external/libtomcrypt/src/mac/pmac/pmac_test.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_done.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_file.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_init.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_memory.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_memory_multi.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_process.c
+#	new file:   code/external/libtomcrypt/src/mac/xcbc/xcbc_test.c
+#	new file:   code/external/libtomcrypt/src/math/fp/ltc_ecc_fp_mulmod.c
+#	new file:   code/external/libtomcrypt/src/math/gmp_desc.c
+#	new file:   code/external/libtomcrypt/src/math/ltm_desc.c
+#	new file:   code/external/libtomcrypt/src/math/multi.c
+#	new file:   code/external/libtomcrypt/src/math/rand_prime.c
+#	new file:   code/external/libtomcrypt/src/math/tfm_desc.c
+#	new file:   code/external/libtomcrypt/src/misc/base64/base64_decode.c
+#	new file:   code/external/libtomcrypt/src/misc/base64/base64_encode.c
+#	new file:   code/external/libtomcrypt/src/misc/burn_stack.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_argchk.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_cipher_descriptor.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_cipher_is_valid.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_cipher.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_cipher_any.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_cipher_id.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_hash.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_hash_any.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_hash_id.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_hash_oid.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_find_prng.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_fsa.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_hash_descriptor.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_hash_is_valid.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_ltc_mp_descriptor.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_prng_descriptor.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_prng_is_valid.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_register_cipher.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_register_hash.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_register_prng.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_unregister_cipher.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_unregister_hash.c
+#	new file:   code/external/libtomcrypt/src/misc/crypt/crypt_unregister_prng.c
+#	new file:   code/external/libtomcrypt/src/misc/error_to_string.c
+#	new file:   code/external/libtomcrypt/src/misc/pkcs5/pkcs_5_1.c
+#	new file:   code/external/libtomcrypt/src/misc/pkcs5/pkcs_5_2.c
+#	new file:   code/external/libtomcrypt/src/misc/zeromem.c
+#	new file:   code/external/libtomcrypt/src/modes/cbc/cbc_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/cbc/cbc_done.c
+#	new file:   code/external/libtomcrypt/src/modes/cbc/cbc_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/cbc/cbc_getiv.c
+#	new file:   code/external/libtomcrypt/src/modes/cbc/cbc_setiv.c
+#	new file:   code/external/libtomcrypt/src/modes/cbc/cbc_start.c
+#	new file:   code/external/libtomcrypt/src/modes/cfb/cfb_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/cfb/cfb_done.c
+#	new file:   code/external/libtomcrypt/src/modes/cfb/cfb_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/cfb/cfb_getiv.c
+#	new file:   code/external/libtomcrypt/src/modes/cfb/cfb_setiv.c
+#	new file:   code/external/libtomcrypt/src/modes/cfb/cfb_start.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_done.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_getiv.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_setiv.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_start.c
+#	new file:   code/external/libtomcrypt/src/modes/ctr/ctr_test.c
+#	new file:   code/external/libtomcrypt/src/modes/ecb/ecb_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/ecb/ecb_done.c
+#	new file:   code/external/libtomcrypt/src/modes/ecb/ecb_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/ecb/ecb_start.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_done.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_getiv.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_setiv.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_start.c
+#	new file:   code/external/libtomcrypt/src/modes/f8/f8_test_mode.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_done.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_getiv.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_process.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_setiv.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_start.c
+#	new file:   code/external/libtomcrypt/src/modes/lrw/lrw_test.c
+#	new file:   code/external/libtomcrypt/src/modes/ofb/ofb_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/ofb/ofb_done.c
+#	new file:   code/external/libtomcrypt/src/modes/ofb/ofb_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/ofb/ofb_getiv.c
+#	new file:   code/external/libtomcrypt/src/modes/ofb/ofb_setiv.c
+#	new file:   code/external/libtomcrypt/src/modes/ofb/ofb_start.c
+#	new file:   code/external/libtomcrypt/src/modes/xts/xts_decrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/xts/xts_done.c
+#	new file:   code/external/libtomcrypt/src/modes/xts/xts_encrypt.c
+#	new file:   code/external/libtomcrypt/src/modes/xts/xts_init.c
+#	new file:   code/external/libtomcrypt/src/modes/xts/xts_mult_x.c
+#	new file:   code/external/libtomcrypt/src/modes/xts/xts_test.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/bit/der_decode_bit_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/bit/der_encode_bit_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/bit/der_length_bit_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/boolean/der_decode_boolean.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/boolean/der_encode_boolean.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/boolean/der_length_boolean.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/choice/der_decode_choice.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/ia5/der_decode_ia5_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/ia5/der_encode_ia5_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/ia5/der_length_ia5_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/integer/der_decode_integer.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/integer/der_encode_integer.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/integer/der_length_integer.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/object_identifier/der_decode_object_identifier.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/object_identifier/der_encode_object_identifier.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/object_identifier/der_length_object_identifier.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/octet/der_decode_octet_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/octet/der_encode_octet_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/octet/der_length_octet_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/printable_string/der_decode_printable_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/printable_string/der_encode_printable_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/printable_string/der_length_printable_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_decode_sequence_ex.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_decode_sequence_flexi.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_decode_sequence_multi.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_encode_sequence_ex.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_encode_sequence_multi.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_length_sequence.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/sequence/der_sequence_free.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/set/der_encode_set.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/set/der_encode_setof.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/short_integer/der_decode_short_integer.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/short_integer/der_encode_short_integer.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/short_integer/der_length_short_integer.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/utctime/der_decode_utctime.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/utctime/der_encode_utctime.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/utctime/der_length_utctime.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/utf8/der_decode_utf8_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/utf8/der_encode_utf8_string.c
+#	new file:   code/external/libtomcrypt/src/pk/asn1/der/utf8/der_length_utf8_string.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_decrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_encrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_export.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_free.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_import.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_make_key.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_shared_secret.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_sign_hash.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_verify_hash.c
+#	new file:   code/external/libtomcrypt/src/pk/dsa/dsa_verify_key.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_ansi_x963_export.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_ansi_x963_import.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_decrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_encrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_export.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_free.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_get_size.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_import.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_make_key.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_shared_secret.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_sign_hash.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_sizes.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_test.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ecc_verify_hash.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_is_valid_idx.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_map.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_mul2add.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_mulmod.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_mulmod_timing.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_points.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_projective_add_point.c
+#	new file:   code/external/libtomcrypt/src/pk/ecc/ltc_ecc_projective_dbl_point.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_decrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_encrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_export.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_exptmod.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_free.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_import.c
+#	new file:   code/external/libtomcrypt/src/pk/katja/katja_make_key.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_i2osp.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_mgf1.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_oaep_decode.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_oaep_encode.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_os2ip.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_pss_decode.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_pss_encode.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_v1_5_decode.c
+#	new file:   code/external/libtomcrypt/src/pk/pkcs1/pkcs_1_v1_5_encode.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_decrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_encrypt_key.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_export.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_exptmod.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_free.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_import.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_make_key.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_sign_hash.c
+#	new file:   code/external/libtomcrypt/src/pk/rsa/rsa_verify_hash.c
+#	new file:   code/external/libtomcrypt/src/prngs/fortuna.c
+#	new file:   code/external/libtomcrypt/src/prngs/rc4.c
+#	new file:   code/external/libtomcrypt/src/prngs/rng_get_bytes.c
+#	new file:   code/external/libtomcrypt/src/prngs/rng_make_prng.c
+#	new file:   code/external/libtomcrypt/src/prngs/sober128.c
+#	new file:   code/external/libtomcrypt/src/prngs/sober128tab.c
+#	new file:   code/external/libtomcrypt/src/prngs/sprng.c
+#	new file:   code/external/libtomcrypt/src/prngs/yarrow.c
+#	new file:   code/external/libtomcrypt/testbuild.sh
+#	new file:   code/external/libtomcrypt/testme.sh
+#	new file:   code/external/libtomcrypt/testprof/base64_test.c
+#	new file:   code/external/libtomcrypt/testprof/cipher_hash_test.c
+#	new file:   code/external/libtomcrypt/testprof/der_tests.c
+#	new file:   code/external/libtomcrypt/testprof/dsa_test.c
+#	new file:   code/external/libtomcrypt/testprof/ecc_test.c
+#	new file:   code/external/libtomcrypt/testprof/katja_test.c
+#	new file:   code/external/libtomcrypt/testprof/mac_test.c
+#	new file:   code/external/libtomcrypt/testprof/makefile
+#	new file:   code/external/libtomcrypt/testprof/makefile.icc
+#	new file:   code/external/libtomcrypt/testprof/makefile.msvc
+#	new file:   code/external/libtomcrypt/testprof/makefile.shared
+#	new file:   code/external/libtomcrypt/testprof/modes_test.c
+#	new file:   code/external/libtomcrypt/testprof/pkcs_1_test.c
+#	new file:   code/external/libtomcrypt/testprof/rsa_test.c
+#	new file:   code/external/libtomcrypt/testprof/store_test.c
+#	new file:   code/external/libtomcrypt/testprof/test.der
+#	new file:   code/external/libtomcrypt/testprof/test.key
+#	new file:   code/external/libtomcrypt/testprof/test_driver.c
+#	new file:   code/external/libtomcrypt/testprof/tomcrypt_test.h
+#	new file:   code/external/libtomcrypt/testprof/x86_prof.c
+#	new file:   code/external/libtomcrypt/updatemakes.sh
+#	new file:   code/external/luacrypt.hpp
+#	new file:   code/external/luacrypto.hpp
+#	new file:   code/external/luacrypto/.gitignore
+#	new file:   code/external/luacrypto/lcrypto.c
+#	new file:   code/external/luacrypto/lcrypto.h
+#	modified:   code/external/luasec/ssl.c
+#	modified:   code/external/luasec/ssl.h
+#	modified:   code/external/luasocket.hpp
+#	modified:   code/external/luasocket/io.h
+#	modified:   code/external/luasocket/make-linux.sh
+#	new file:   code/external/luasocket/makefile
+#	modified:   code/external/luasocket/socket.h
+#	modified:   code/external/luasocket/usocket.c
+#	modified:   code/external/luasocket/usocket.h
+#	modified:   code/external/luasocket/wsocket.c
+#	modified:   code/external/luasocket/wsocket.h
+#	modified:   code/external/openssl/Makefile.bak
+#	new file:   docs/libtomcrypt/demos/encrypt.c
+#	new file:   docs/libtomcrypt/demos/hashsum.c
+#	new file:   docs/libtomcrypt/demos/multi.c
+#	new file:   docs/libtomcrypt/demos/small.c
+#	new file:   docs/libtomcrypt/demos/test.c
+#	new file:   docs/libtomcrypt/demos/timing.c
+#	new file:   docs/libtomcrypt/demos/tv_gen.c
+#	new file:   docs/libtomcrypt/footer.html
+#	new file:   docs/libtomcrypt/header.html
+#	new file:   docs/libtomcrypt/notes/base64_tv.txt
+#	new file:   docs/libtomcrypt/notes/ccm_tv.txt
+#	new file:   docs/libtomcrypt/notes/cipher_tv.txt
+#	new file:   docs/libtomcrypt/notes/eax_tv.txt
+#	new file:   docs/libtomcrypt/notes/ecc_tv.txt
+#	new file:   docs/libtomcrypt/notes/etc/saferp_optimizer.c
+#	new file:   docs/libtomcrypt/notes/etc/whirlgen.c
+#	new file:   docs/libtomcrypt/notes/etc/whirltest.c
+#	new file:   docs/libtomcrypt/notes/gcm_tv.txt
+#	new file:   docs/libtomcrypt/notes/hash_tv.txt
+#	new file:   docs/libtomcrypt/notes/hmac_tv.txt
+#	new file:   docs/libtomcrypt/notes/lrw_tv.txt
+#	new file:   docs/libtomcrypt/notes/ocb_tv.txt
+#	new file:   docs/libtomcrypt/notes/omac_tv.txt
+#	new file:   docs/libtomcrypt/notes/pmac_tv.txt
+#	new file:   docs/libtomcrypt/notes/tech0001.txt
+#	new file:   docs/libtomcrypt/notes/tech0002.txt
+#	new file:   docs/libtomcrypt/notes/tech0003.txt
+#	new file:   docs/libtomcrypt/notes/tech0004.txt
+#	new file:   docs/libtomcrypt/notes/tech0005.txt
+#	new file:   docs/libtomcrypt/notes/tech0006.txt
+#	new file:   docs/libtomcrypt/notes/tech0007.txt
+#	new file:   docs/luacrypto/doc/Makefile.am
+#	new file:   docs/luacrypto/doc/Makefile.in
+#	new file:   docs/luacrypto/doc/us/examples.html
+#	new file:   docs/luacrypto/doc/us/index.html
+#	new file:   docs/luacrypto/doc/us/license.html
+#	new file:   docs/luacrypto/doc/us/luacrypto-128.png
+#	new file:   docs/luacrypto/doc/us/manual.html
+#	new file:   docs/luacrypto/tests/Makefile.am
+#	new file:   docs/luacrypto/tests/Makefile.in
+#	new file:   docs/luacrypto/tests/ca/README
+#	new file:   docs/luacrypto/tests/ca/ca.crt
+#	new file:   docs/luacrypto/tests/ca/ca.key
+#	new file:   docs/luacrypto/tests/ca/server.crt
+#	new file:   docs/luacrypto/tests/ca/server.csr
+#	new file:   docs/luacrypto/tests/ca/server.key
+#	new file:   docs/luacrypto/tests/ca/server.key.insecure
+#	new file:   docs/luacrypto/tests/encrypt.lua
+#	new file:   docs/luacrypto/tests/message
+#	new file:   docs/luacrypto/tests/open_seal.lua
+#	new file:   docs/luacrypto/tests/pkeytest.lua
+#	new file:   docs/luacrypto/tests/rand.lua
+#	new file:   docs/luacrypto/tests/run-tests
+#	new file:   docs/luacrypto/tests/test.lua
+#	new file:   docs/luacrypto/tests/tmp.rnd
+#	new file:   docs/luacrypto/tests/x509_ca.lua
+#	renamed:    code/external/openssl/demos/README -> docs/openssl/demos/README
+#	renamed:    code/external/openssl/demos/asn1/README.ASN1 -> docs/openssl/demos/asn1/README.ASN1
+#	renamed:    code/external/openssl/demos/asn1/ocsp.c -> docs/openssl/demos/asn1/ocsp.c
+#	renamed:    code/external/openssl/demos/b64.c -> docs/openssl/demos/b64.c
+#	renamed:    code/external/openssl/demos/b64.pl -> docs/openssl/demos/b64.pl
+#	renamed:    code/external/openssl/demos/bio/Makefile -> docs/openssl/demos/bio/Makefile
+#	renamed:    code/external/openssl/demos/bio/README -> docs/openssl/demos/bio/README
+#	renamed:    code/external/openssl/demos/bio/saccept.c -> docs/openssl/demos/bio/saccept.c
+#	renamed:    code/external/openssl/demos/bio/sconnect.c -> docs/openssl/demos/bio/sconnect.c
+#	renamed:    code/external/openssl/demos/bio/server.pem -> docs/openssl/demos/bio/server.pem
+#	renamed:    code/external/openssl/demos/cms/cacert.pem -> docs/openssl/demos/cms/cacert.pem
+#	renamed:    code/external/openssl/demos/cms/cakey.pem -> docs/openssl/demos/cms/cakey.pem
+#	renamed:    code/external/openssl/demos/cms/cms_comp.c -> docs/openssl/demos/cms/cms_comp.c
+#	renamed:    code/external/openssl/demos/cms/cms_ddec.c -> docs/openssl/demos/cms/cms_ddec.c
+#	renamed:    code/external/openssl/demos/cms/cms_dec.c -> docs/openssl/demos/cms/cms_dec.c
+#	renamed:    code/external/openssl/demos/cms/cms_denc.c -> docs/openssl/demos/cms/cms_denc.c
+#	renamed:    code/external/openssl/demos/cms/cms_enc.c -> docs/openssl/demos/cms/cms_enc.c
+#	renamed:    code/external/openssl/demos/cms/cms_sign.c -> docs/openssl/demos/cms/cms_sign.c
+#	renamed:    code/external/openssl/demos/cms/cms_sign2.c -> docs/openssl/demos/cms/cms_sign2.c
+#	renamed:    code/external/openssl/demos/cms/cms_uncomp.c -> docs/openssl/demos/cms/cms_uncomp.c
+#	renamed:    code/external/openssl/demos/cms/cms_ver.c -> docs/openssl/demos/cms/cms_ver.c
+#	renamed:    code/external/openssl/demos/cms/comp.txt -> docs/openssl/demos/cms/comp.txt
+#	renamed:    code/external/openssl/demos/cms/encr.txt -> docs/openssl/demos/cms/encr.txt
+#	renamed:    code/external/openssl/demos/cms/sign.txt -> docs/openssl/demos/cms/sign.txt
+#	renamed:    code/external/openssl/demos/cms/signer.pem -> docs/openssl/demos/cms/signer.pem
+#	renamed:    code/external/openssl/demos/cms/signer2.pem -> docs/openssl/demos/cms/signer2.pem
+#	renamed:    code/external/openssl/demos/easy_tls/Makefile -> docs/openssl/demos/easy_tls/Makefile
+#	renamed:    code/external/openssl/demos/easy_tls/README -> docs/openssl/demos/easy_tls/README
+#	renamed:    code/external/openssl/demos/easy_tls/cacerts.pem -> docs/openssl/demos/easy_tls/cacerts.pem
+#	renamed:    code/external/openssl/demos/easy_tls/cert.pem -> docs/openssl/demos/easy_tls/cert.pem
+#	renamed:    code/external/openssl/demos/easy_tls/easy-tls.c -> docs/openssl/demos/easy_tls/easy-tls.c
+#	renamed:    code/external/openssl/demos/easy_tls/easy-tls.h -> docs/openssl/demos/easy_tls/easy-tls.h
+#	renamed:    code/external/openssl/demos/easy_tls/test.c -> docs/openssl/demos/easy_tls/test.c
+#	renamed:    code/external/openssl/demos/easy_tls/test.h -> docs/openssl/demos/easy_tls/test.h
+#	renamed:    code/external/openssl/demos/eay/Makefile -> docs/openssl/demos/eay/Makefile
+#	renamed:    code/external/openssl/demos/eay/base64.c -> docs/openssl/demos/eay/base64.c
+#	renamed:    code/external/openssl/demos/eay/conn.c -> docs/openssl/demos/eay/conn.c
+#	renamed:    code/external/openssl/demos/eay/loadrsa.c -> docs/openssl/demos/eay/loadrsa.c
+#	renamed:    code/external/openssl/demos/engines/cluster_labs/Makefile -> docs/openssl/demos/engines/cluster_labs/Makefile
+#	renamed:    code/external/openssl/demos/engines/cluster_labs/cluster_labs.h -> docs/openssl/demos/engines/cluster_labs/cluster_labs.h
+#	renamed:    code/external/openssl/demos/engines/cluster_labs/hw_cluster_labs.c -> docs/openssl/demos/engines/cluster_labs/hw_cluster_labs.c
+#	renamed:    code/external/openssl/demos/engines/cluster_labs/hw_cluster_labs.ec -> docs/openssl/demos/engines/cluster_labs/hw_cluster_labs.ec
+#	renamed:    code/external/openssl/demos/engines/cluster_labs/hw_cluster_labs_err.c -> docs/openssl/demos/engines/cluster_labs/hw_cluster_labs_err.c
+#	renamed:    code/external/openssl/demos/engines/cluster_labs/hw_cluster_labs_err.h -> docs/openssl/demos/engines/cluster_labs/hw_cluster_labs_err.h
+#	renamed:    code/external/openssl/demos/engines/ibmca/Makefile -> docs/openssl/demos/engines/ibmca/Makefile
+#	renamed:    code/external/openssl/demos/engines/ibmca/hw_ibmca.c -> docs/openssl/demos/engines/ibmca/hw_ibmca.c
+#	renamed:    code/external/openssl/demos/engines/ibmca/hw_ibmca.ec -> docs/openssl/demos/engines/ibmca/hw_ibmca.ec
+#	renamed:    code/external/openssl/demos/engines/ibmca/hw_ibmca_err.c -> docs/openssl/demos/engines/ibmca/hw_ibmca_err.c
+#	renamed:    code/external/openssl/demos/engines/ibmca/hw_ibmca_err.h -> docs/openssl/demos/engines/ibmca/hw_ibmca_err.h
+#	renamed:    code/external/openssl/demos/engines/ibmca/ica_openssl_api.h -> docs/openssl/demos/engines/ibmca/ica_openssl_api.h
+#	renamed:    code/external/openssl/demos/engines/rsaref/Makefile -> docs/openssl/demos/engines/rsaref/Makefile
+#	renamed:    code/external/openssl/demos/engines/rsaref/README -> docs/openssl/demos/engines/rsaref/README
+#	renamed:    code/external/openssl/demos/engines/rsaref/build.com -> docs/openssl/demos/engines/rsaref/build.com
+#	renamed:    code/external/openssl/demos/engines/rsaref/rsaref.c -> docs/openssl/demos/engines/rsaref/rsaref.c
+#	renamed:    code/external/openssl/demos/engines/rsaref/rsaref.ec -> docs/openssl/demos/engines/rsaref/rsaref.ec
+#	renamed:    code/external/openssl/demos/engines/rsaref/rsaref_err.c -> docs/openssl/demos/engines/rsaref/rsaref_err.c
+#	renamed:    code/external/openssl/demos/engines/rsaref/rsaref_err.h -> docs/openssl/demos/engines/rsaref/rsaref_err.h
+#	renamed:    code/external/openssl/demos/engines/zencod/Makefile -> docs/openssl/demos/engines/zencod/Makefile
+#	renamed:    code/external/openssl/demos/engines/zencod/hw_zencod.c -> docs/openssl/demos/engines/zencod/hw_zencod.c
+#	renamed:    code/external/openssl/demos/engines/zencod/hw_zencod.ec -> docs/openssl/demos/engines/zencod/hw_zencod.ec
+#	renamed:    code/external/openssl/demos/engines/zencod/hw_zencod.h -> docs/openssl/demos/engines/zencod/hw_zencod.h
+#	renamed:    code/external/openssl/demos/engines/zencod/hw_zencod_err.c -> docs/openssl/demos/engines/zencod/hw_zencod_err.c
+#	renamed:    code/external/openssl/demos/engines/zencod/hw_zencod_err.h -> docs/openssl/demos/engines/zencod/hw_zencod_err.h
+#	renamed:    code/external/openssl/demos/maurice/Makefile -> docs/openssl/demos/maurice/Makefile
+#	renamed:    code/external/openssl/demos/maurice/README -> docs/openssl/demos/maurice/README
+#	renamed:    code/external/openssl/demos/maurice/cert.pem -> docs/openssl/demos/maurice/cert.pem
+#	renamed:    code/external/openssl/demos/maurice/example1.c -> docs/openssl/demos/maurice/example1.c
+#	renamed:    code/external/openssl/demos/maurice/example2.c -> docs/openssl/demos/maurice/example2.c
+#	renamed:    code/external/openssl/demos/maurice/example3.c -> docs/openssl/demos/maurice/example3.c
+#	renamed:    code/external/openssl/demos/maurice/example4.c -> docs/openssl/demos/maurice/example4.c
+#	renamed:    code/external/openssl/demos/maurice/loadkeys.c -> docs/openssl/demos/maurice/loadkeys.c
+#	renamed:    code/external/openssl/demos/maurice/loadkeys.h -> docs/openssl/demos/maurice/loadkeys.h
+#	renamed:    code/external/openssl/demos/maurice/privkey.pem -> docs/openssl/demos/maurice/privkey.pem
+#	renamed:    code/external/openssl/demos/pkcs12/README -> docs/openssl/demos/pkcs12/README
+#	renamed:    code/external/openssl/demos/pkcs12/pkread.c -> docs/openssl/demos/pkcs12/pkread.c
+#	renamed:    code/external/openssl/demos/pkcs12/pkwrite.c -> docs/openssl/demos/pkcs12/pkwrite.c
+#	renamed:    code/external/openssl/demos/prime/Makefile -> docs/openssl/demos/prime/Makefile
+#	renamed:    code/external/openssl/demos/prime/prime.c -> docs/openssl/demos/prime/prime.c
+#	renamed:    code/external/openssl/demos/privkey.pem -> docs/openssl/demos/privkey.pem
+#	renamed:    code/external/openssl/demos/selfsign.c -> docs/openssl/demos/selfsign.c
+#	renamed:    code/external/openssl/demos/sign/Makefile -> docs/openssl/demos/sign/Makefile
+#	renamed:    code/external/openssl/demos/sign/cert.pem -> docs/openssl/demos/sign/cert.pem
+#	renamed:    code/external/openssl/demos/sign/key.pem -> docs/openssl/demos/sign/key.pem
+#	renamed:    code/external/openssl/demos/sign/sig.txt -> docs/openssl/demos/sign/sig.txt
+#	renamed:    code/external/openssl/demos/sign/sign.c -> docs/openssl/demos/sign/sign.c
+#	renamed:    code/external/openssl/demos/sign/sign.txt -> docs/openssl/demos/sign/sign.txt
+#	renamed:    code/external/openssl/demos/smime/cacert.pem -> docs/openssl/demos/smime/cacert.pem
+#	renamed:    code/external/openssl/demos/smime/cakey.pem -> docs/openssl/demos/smime/cakey.pem
+#	renamed:    code/external/openssl/demos/smime/encr.txt -> docs/openssl/demos/smime/encr.txt
+#	renamed:    code/external/openssl/demos/smime/sign.txt -> docs/openssl/demos/smime/sign.txt
+#	renamed:    code/external/openssl/demos/smime/signer.pem -> docs/openssl/demos/smime/signer.pem
+#	renamed:    code/external/openssl/demos/smime/signer2.pem -> docs/openssl/demos/smime/signer2.pem
+#	renamed:    code/external/openssl/demos/smime/smdec.c -> docs/openssl/demos/smime/smdec.c
+#	renamed:    code/external/openssl/demos/smime/smenc.c -> docs/openssl/demos/smime/smenc.c
+#	renamed:    code/external/openssl/demos/smime/smsign.c -> docs/openssl/demos/smime/smsign.c
+#	renamed:    code/external/openssl/demos/smime/smsign2.c -> docs/openssl/demos/smime/smsign2.c
+#	renamed:    code/external/openssl/demos/smime/smver.c -> docs/openssl/demos/smime/smver.c
+#	renamed:    code/external/openssl/demos/spkigen.c -> docs/openssl/demos/spkigen.c
+#	renamed:    code/external/openssl/demos/ssl/cli.cpp -> docs/openssl/demos/ssl/cli.cpp
+#	renamed:    code/external/openssl/demos/ssl/inetdsrv.cpp -> docs/openssl/demos/ssl/inetdsrv.cpp
+#	renamed:    code/external/openssl/demos/ssl/serv.cpp -> docs/openssl/demos/ssl/serv.cpp
+#	renamed:    code/external/openssl/demos/ssltest-ecc/ECC-RSAcertgen.sh -> docs/openssl/demos/ssltest-ecc/ECC-RSAcertgen.sh
+#	renamed:    code/external/openssl/demos/ssltest-ecc/ECCcertgen.sh -> docs/openssl/demos/ssltest-ecc/ECCcertgen.sh
+#	renamed:    code/external/openssl/demos/ssltest-ecc/README -> docs/openssl/demos/ssltest-ecc/README
+#	renamed:    code/external/openssl/demos/ssltest-ecc/RSAcertgen.sh -> docs/openssl/demos/ssltest-ecc/RSAcertgen.sh
+#	renamed:    code/external/openssl/demos/ssltest-ecc/ssltest.sh -> docs/openssl/demos/ssltest-ecc/ssltest.sh
+#	renamed:    code/external/openssl/demos/state_machine/Makefile -> docs/openssl/demos/state_machine/Makefile
+#	renamed:    code/external/openssl/demos/state_machine/state_machine.c -> docs/openssl/demos/state_machine/state_machine.c
+#	renamed:    code/external/openssl/demos/tunala/A-client.pem -> docs/openssl/demos/tunala/A-client.pem
+#	renamed:    code/external/openssl/demos/tunala/A-server.pem -> docs/openssl/demos/tunala/A-server.pem
+#	renamed:    code/external/openssl/demos/tunala/CA.pem -> docs/openssl/demos/tunala/CA.pem
+#	renamed:    code/external/openssl/demos/tunala/INSTALL -> docs/openssl/demos/tunala/INSTALL
+#	renamed:    code/external/openssl/demos/tunala/Makefile -> docs/openssl/demos/tunala/Makefile
+#	renamed:    code/external/openssl/demos/tunala/Makefile.am -> docs/openssl/demos/tunala/Makefile.am
+#	renamed:    code/external/openssl/demos/tunala/README -> docs/openssl/demos/tunala/README
+#	renamed:    code/external/openssl/demos/tunala/autogunk.sh -> docs/openssl/demos/tunala/autogunk.sh
+#	renamed:    code/external/openssl/demos/tunala/autoungunk.sh -> docs/openssl/demos/tunala/autoungunk.sh
+#	renamed:    code/external/openssl/demos/tunala/breakage.c -> docs/openssl/demos/tunala/breakage.c
+#	renamed:    code/external/openssl/demos/tunala/buffer.c -> docs/openssl/demos/tunala/buffer.c
+#	renamed:    code/external/openssl/demos/tunala/cb.c -> docs/openssl/demos/tunala/cb.c
+#	renamed:    code/external/openssl/demos/tunala/configure.in -> docs/openssl/demos/tunala/configure.in
+#	renamed:    code/external/openssl/demos/tunala/ip.c -> docs/openssl/demos/tunala/ip.c
+#	renamed:    code/external/openssl/demos/tunala/sm.c -> docs/openssl/demos/tunala/sm.c
+#	renamed:    code/external/openssl/demos/tunala/test.sh -> docs/openssl/demos/tunala/test.sh
+#	renamed:    code/external/openssl/demos/tunala/tunala.c -> docs/openssl/demos/tunala/tunala.c
+#	renamed:    code/external/openssl/demos/tunala/tunala.h -> docs/openssl/demos/tunala/tunala.h
+#	renamed:    code/external/openssl/demos/x509/README -> docs/openssl/demos/x509/README
+#	renamed:    code/external/openssl/demos/x509/mkcert.c -> docs/openssl/demos/x509/mkcert.c
+#	renamed:    code/external/openssl/demos/x509/mkreq.c -> docs/openssl/demos/x509/mkreq.c
+#	renamed:    docs/openssl/HOWTO/certificates.txt -> docs/openssl/doc/HOWTO/certificates.txt
+#	renamed:    docs/openssl/HOWTO/keys.txt -> docs/openssl/doc/HOWTO/keys.txt
+#	renamed:    docs/openssl/HOWTO/proxy_certificates.txt -> docs/openssl/doc/HOWTO/proxy_certificates.txt
+#	new file:   docs/openssl/doc/New
+#	renamed:    docs/openssl/README -> docs/openssl/doc/README
+#	renamed:    docs/openssl/apps/CA.pl.pod -> docs/openssl/doc/apps/CA.pl.pod
+#	renamed:    docs/openssl/apps/asn1parse.pod -> docs/openssl/doc/apps/asn1parse.pod
+#	renamed:    docs/openssl/apps/ca.pod -> docs/openssl/doc/apps/ca.pod
+#	renamed:    docs/openssl/apps/ciphers.pod -> docs/openssl/doc/apps/ciphers.pod
+#	renamed:    docs/openssl/apps/cms.pod -> docs/openssl/doc/apps/cms.pod
+#	renamed:    docs/openssl/apps/config.pod -> docs/openssl/doc/apps/config.pod
+#	renamed:    docs/openssl/apps/crl.pod -> docs/openssl/doc/apps/crl.pod
+#	renamed:    docs/openssl/apps/crl2pkcs7.pod -> docs/openssl/doc/apps/crl2pkcs7.pod
+#	renamed:    docs/openssl/apps/dgst.pod -> docs/openssl/doc/apps/dgst.pod
+#	renamed:    docs/openssl/apps/dhparam.pod -> docs/openssl/doc/apps/dhparam.pod
+#	renamed:    docs/openssl/apps/dsa.pod -> docs/openssl/doc/apps/dsa.pod
+#	renamed:    docs/openssl/apps/dsaparam.pod -> docs/openssl/doc/apps/dsaparam.pod
+#	renamed:    docs/openssl/apps/ec.pod -> docs/openssl/doc/apps/ec.pod
+#	renamed:    docs/openssl/apps/ecparam.pod -> docs/openssl/doc/apps/ecparam.pod
+#	renamed:    docs/openssl/apps/enc.pod -> docs/openssl/doc/apps/enc.pod
+#	renamed:    docs/openssl/apps/errstr.pod -> docs/openssl/doc/apps/errstr.pod
+#	renamed:    docs/openssl/apps/gendsa.pod -> docs/openssl/doc/apps/gendsa.pod
+#	renamed:    docs/openssl/apps/genpkey.pod -> docs/openssl/doc/apps/genpkey.pod
+#	renamed:    docs/openssl/apps/genrsa.pod -> docs/openssl/doc/apps/genrsa.pod
+#	renamed:    docs/openssl/apps/nseq.pod -> docs/openssl/doc/apps/nseq.pod
+#	renamed:    docs/openssl/apps/ocsp.pod -> docs/openssl/doc/apps/ocsp.pod
+#	renamed:    docs/openssl/apps/openssl.pod -> docs/openssl/doc/apps/openssl.pod
+#	renamed:    docs/openssl/apps/passwd.pod -> docs/openssl/doc/apps/passwd.pod
+#	renamed:    docs/openssl/apps/pkcs12.pod -> docs/openssl/doc/apps/pkcs12.pod
+#	renamed:    docs/openssl/apps/pkcs7.pod -> docs/openssl/doc/apps/pkcs7.pod
+#	renamed:    docs/openssl/apps/pkcs8.pod -> docs/openssl/doc/apps/pkcs8.pod
+#	renamed:    docs/openssl/apps/pkey.pod -> docs/openssl/doc/apps/pkey.pod
+#	renamed:    docs/openssl/apps/pkeyparam.pod -> docs/openssl/doc/apps/pkeyparam.pod
+#	renamed:    docs/openssl/apps/pkeyutl.pod -> docs/openssl/doc/apps/pkeyutl.pod
+#	renamed:    docs/openssl/apps/rand.pod -> docs/openssl/doc/apps/rand.pod
+#	renamed:    docs/openssl/apps/req.pod -> docs/openssl/doc/apps/req.pod
+#	renamed:    docs/openssl/apps/rsa.pod -> docs/openssl/doc/apps/rsa.pod
+#	renamed:    docs/openssl/apps/rsautl.pod -> docs/openssl/doc/apps/rsautl.pod
+#	renamed:    docs/openssl/apps/s_client.pod -> docs/openssl/doc/apps/s_client.pod
+#	renamed:    docs/openssl/apps/s_server.pod -> docs/openssl/doc/apps/s_server.pod
+#	renamed:    docs/openssl/apps/s_time.pod -> docs/openssl/doc/apps/s_time.pod
+#	renamed:    docs/openssl/apps/sess_id.pod -> docs/openssl/doc/apps/sess_id.pod
+#	renamed:    docs/openssl/apps/smime.pod -> docs/openssl/doc/apps/smime.pod
+#	renamed:    docs/openssl/apps/speed.pod -> docs/openssl/doc/apps/speed.pod
+#	renamed:    docs/openssl/apps/spkac.pod -> docs/openssl/doc/apps/spkac.pod
+#	renamed:    docs/openssl/apps/ts.pod -> docs/openssl/doc/apps/ts.pod
+#	renamed:    docs/openssl/apps/tsget.pod -> docs/openssl/doc/apps/tsget.pod
+#	renamed:    docs/openssl/apps/verify.pod -> docs/openssl/doc/apps/verify.pod
+#	renamed:    docs/openssl/apps/version.pod -> docs/openssl/doc/apps/version.pod
+#	renamed:    docs/openssl/apps/x509.pod -> docs/openssl/doc/apps/x509.pod
+#	renamed:    docs/openssl/apps/x509v3_config.pod -> docs/openssl/doc/apps/x509v3_config.pod
+#	renamed:    docs/openssl/c-indentation.el -> docs/openssl/doc/c-indentation.el
+#	renamed:    docs/openssl/crypto/ASN1_OBJECT_new.pod -> docs/openssl/doc/crypto/ASN1_OBJECT_new.pod
+#	renamed:    docs/openssl/crypto/ASN1_STRING_length.pod -> docs/openssl/doc/crypto/ASN1_STRING_length.pod
+#	renamed:    docs/openssl/crypto/ASN1_STRING_new.pod -> docs/openssl/doc/crypto/ASN1_STRING_new.pod
+#	renamed:    docs/openssl/crypto/ASN1_STRING_print_ex.pod -> docs/openssl/doc/crypto/ASN1_STRING_print_ex.pod
+#	renamed:    docs/openssl/crypto/ASN1_generate_nconf.pod -> docs/openssl/doc/crypto/ASN1_generate_nconf.pod
+#	renamed:    docs/openssl/crypto/BIO_ctrl.pod -> docs/openssl/doc/crypto/BIO_ctrl.pod
+#	renamed:    docs/openssl/crypto/BIO_f_base64.pod -> docs/openssl/doc/crypto/BIO_f_base64.pod
+#	renamed:    docs/openssl/crypto/BIO_f_buffer.pod -> docs/openssl/doc/crypto/BIO_f_buffer.pod
+#	renamed:    docs/openssl/crypto/BIO_f_cipher.pod -> docs/openssl/doc/crypto/BIO_f_cipher.pod
+#	renamed:    docs/openssl/crypto/BIO_f_md.pod -> docs/openssl/doc/crypto/BIO_f_md.pod
+#	renamed:    docs/openssl/crypto/BIO_f_null.pod -> docs/openssl/doc/crypto/BIO_f_null.pod
+#	renamed:    docs/openssl/crypto/BIO_f_ssl.pod -> docs/openssl/doc/crypto/BIO_f_ssl.pod
+#	renamed:    docs/openssl/crypto/BIO_find_type.pod -> docs/openssl/doc/crypto/BIO_find_type.pod
+#	renamed:    docs/openssl/crypto/BIO_new.pod -> docs/openssl/doc/crypto/BIO_new.pod
+#	renamed:    docs/openssl/crypto/BIO_new_CMS.pod -> docs/openssl/doc/crypto/BIO_new_CMS.pod
+#	renamed:    docs/openssl/crypto/BIO_push.pod -> docs/openssl/doc/crypto/BIO_push.pod
+#	renamed:    docs/openssl/crypto/BIO_read.pod -> docs/openssl/doc/crypto/BIO_read.pod
+#	renamed:    docs/openssl/crypto/BIO_s_accept.pod -> docs/openssl/doc/crypto/BIO_s_accept.pod
+#	renamed:    docs/openssl/crypto/BIO_s_bio.pod -> docs/openssl/doc/crypto/BIO_s_bio.pod
+#	renamed:    docs/openssl/crypto/BIO_s_connect.pod -> docs/openssl/doc/crypto/BIO_s_connect.pod
+#	renamed:    docs/openssl/crypto/BIO_s_fd.pod -> docs/openssl/doc/crypto/BIO_s_fd.pod
+#	renamed:    docs/openssl/crypto/BIO_s_file.pod -> docs/openssl/doc/crypto/BIO_s_file.pod
+#	renamed:    docs/openssl/crypto/BIO_s_mem.pod -> docs/openssl/doc/crypto/BIO_s_mem.pod
+#	renamed:    docs/openssl/crypto/BIO_s_null.pod -> docs/openssl/doc/crypto/BIO_s_null.pod
+#	renamed:    docs/openssl/crypto/BIO_s_socket.pod -> docs/openssl/doc/crypto/BIO_s_socket.pod
+#	renamed:    docs/openssl/crypto/BIO_set_callback.pod -> docs/openssl/doc/crypto/BIO_set_callback.pod
+#	renamed:    docs/openssl/crypto/BIO_should_retry.pod -> docs/openssl/doc/crypto/BIO_should_retry.pod
+#	renamed:    docs/openssl/crypto/BN_BLINDING_new.pod -> docs/openssl/doc/crypto/BN_BLINDING_new.pod
+#	renamed:    docs/openssl/crypto/BN_CTX_new.pod -> docs/openssl/doc/crypto/BN_CTX_new.pod
+#	renamed:    docs/openssl/crypto/BN_CTX_start.pod -> docs/openssl/doc/crypto/BN_CTX_start.pod
+#	renamed:    docs/openssl/crypto/BN_add.pod -> docs/openssl/doc/crypto/BN_add.pod
+#	renamed:    docs/openssl/crypto/BN_add_word.pod -> docs/openssl/doc/crypto/BN_add_word.pod
+#	renamed:    docs/openssl/crypto/BN_bn2bin.pod -> docs/openssl/doc/crypto/BN_bn2bin.pod
+#	renamed:    docs/openssl/crypto/BN_cmp.pod -> docs/openssl/doc/crypto/BN_cmp.pod
+#	renamed:    docs/openssl/crypto/BN_copy.pod -> docs/openssl/doc/crypto/BN_copy.pod
+#	renamed:    docs/openssl/crypto/BN_generate_prime.pod -> docs/openssl/doc/crypto/BN_generate_prime.pod
+#	renamed:    docs/openssl/crypto/BN_mod_inverse.pod -> docs/openssl/doc/crypto/BN_mod_inverse.pod
+#	renamed:    docs/openssl/crypto/BN_mod_mul_montgomery.pod -> docs/openssl/doc/crypto/BN_mod_mul_montgomery.pod
+#	renamed:    docs/openssl/crypto/BN_mod_mul_reciprocal.pod -> docs/openssl/doc/crypto/BN_mod_mul_reciprocal.pod
+#	renamed:    docs/openssl/crypto/BN_new.pod -> docs/openssl/doc/crypto/BN_new.pod
+#	renamed:    docs/openssl/crypto/BN_num_bytes.pod -> docs/openssl/doc/crypto/BN_num_bytes.pod
+#	renamed:    docs/openssl/crypto/BN_rand.pod -> docs/openssl/doc/crypto/BN_rand.pod
+#	renamed:    docs/openssl/crypto/BN_set_bit.pod -> docs/openssl/doc/crypto/BN_set_bit.pod
+#	renamed:    docs/openssl/crypto/BN_swap.pod -> docs/openssl/doc/crypto/BN_swap.pod
+#	renamed:    docs/openssl/crypto/BN_zero.pod -> docs/openssl/doc/crypto/BN_zero.pod
+#	renamed:    docs/openssl/crypto/CMS_add0_cert.pod -> docs/openssl/doc/crypto/CMS_add0_cert.pod
+#	renamed:    docs/openssl/crypto/CMS_add1_recipient_cert.pod -> docs/openssl/doc/crypto/CMS_add1_recipient_cert.pod
+#	renamed:    docs/openssl/crypto/CMS_compress.pod -> docs/openssl/doc/crypto/CMS_compress.pod
+#	renamed:    docs/openssl/crypto/CMS_decrypt.pod -> docs/openssl/doc/crypto/CMS_decrypt.pod
+#	renamed:    docs/openssl/crypto/CMS_encrypt.pod -> docs/openssl/doc/crypto/CMS_encrypt.pod
+#	renamed:    docs/openssl/crypto/CMS_final.pod -> docs/openssl/doc/crypto/CMS_final.pod
+#	renamed:    docs/openssl/crypto/CMS_get0_RecipientInfos.pod -> docs/openssl/doc/crypto/CMS_get0_RecipientInfos.pod
+#	renamed:    docs/openssl/crypto/CMS_get0_SignerInfos.pod -> docs/openssl/doc/crypto/CMS_get0_SignerInfos.pod
+#	renamed:    docs/openssl/crypto/CMS_get0_type.pod -> docs/openssl/doc/crypto/CMS_get0_type.pod
+#	renamed:    docs/openssl/crypto/CMS_get1_ReceiptRequest.pod -> docs/openssl/doc/crypto/CMS_get1_ReceiptRequest.pod
+#	renamed:    docs/openssl/crypto/CMS_sign.pod -> docs/openssl/doc/crypto/CMS_sign.pod
+#	renamed:    docs/openssl/crypto/CMS_sign_add1_signer.pod -> docs/openssl/doc/crypto/CMS_sign_add1_signer.pod
+#	renamed:    docs/openssl/crypto/CMS_sign_receipt.pod -> docs/openssl/doc/crypto/CMS_sign_receipt.pod
+#	renamed:    docs/openssl/crypto/CMS_uncompress.pod -> docs/openssl/doc/crypto/CMS_uncompress.pod
+#	renamed:    docs/openssl/crypto/CMS_verify.pod -> docs/openssl/doc/crypto/CMS_verify.pod
+#	renamed:    docs/openssl/crypto/CMS_verify_receipt.pod -> docs/openssl/doc/crypto/CMS_verify_receipt.pod
+#	renamed:    docs/openssl/crypto/CONF_modules_free.pod -> docs/openssl/doc/crypto/CONF_modules_free.pod
+#	renamed:    docs/openssl/crypto/CONF_modules_load_file.pod -> docs/openssl/doc/crypto/CONF_modules_load_file.pod
+#	renamed:    docs/openssl/crypto/CRYPTO_set_ex_data.pod -> docs/openssl/doc/crypto/CRYPTO_set_ex_data.pod
+#	renamed:    docs/openssl/crypto/DH_generate_key.pod -> docs/openssl/doc/crypto/DH_generate_key.pod
+#	renamed:    docs/openssl/crypto/DH_generate_parameters.pod -> docs/openssl/doc/crypto/DH_generate_parameters.pod
+#	renamed:    docs/openssl/crypto/DH_get_ex_new_index.pod -> docs/openssl/doc/crypto/DH_get_ex_new_index.pod
+#	renamed:    docs/openssl/crypto/DH_new.pod -> docs/openssl/doc/crypto/DH_new.pod
+#	renamed:    docs/openssl/crypto/DH_set_method.pod -> docs/openssl/doc/crypto/DH_set_method.pod
+#	renamed:    docs/openssl/crypto/DH_size.pod -> docs/openssl/doc/crypto/DH_size.pod
+#	renamed:    docs/openssl/crypto/DSA_SIG_new.pod -> docs/openssl/doc/crypto/DSA_SIG_new.pod
+#	renamed:    docs/openssl/crypto/DSA_do_sign.pod -> docs/openssl/doc/crypto/DSA_do_sign.pod
+#	renamed:    docs/openssl/crypto/DSA_dup_DH.pod -> docs/openssl/doc/crypto/DSA_dup_DH.pod
+#	renamed:    docs/openssl/crypto/DSA_generate_key.pod -> docs/openssl/doc/crypto/DSA_generate_key.pod
+#	renamed:    docs/openssl/crypto/DSA_generate_parameters.pod -> docs/openssl/doc/crypto/DSA_generate_parameters.pod
+#	renamed:    docs/openssl/crypto/DSA_get_ex_new_index.pod -> docs/openssl/doc/crypto/DSA_get_ex_new_index.pod
+#	renamed:    docs/openssl/crypto/DSA_new.pod -> docs/openssl/doc/crypto/DSA_new.pod
+#	renamed:    docs/openssl/crypto/DSA_set_method.pod -> docs/openssl/doc/crypto/DSA_set_method.pod
+#	renamed:    docs/openssl/crypto/DSA_sign.pod -> docs/openssl/doc/crypto/DSA_sign.pod
+#	renamed:    docs/openssl/crypto/DSA_size.pod -> docs/openssl/doc/crypto/DSA_size.pod
+#	renamed:    docs/openssl/crypto/ERR_GET_LIB.pod -> docs/openssl/doc/crypto/ERR_GET_LIB.pod
+#	renamed:    docs/openssl/crypto/ERR_clear_error.pod -> docs/openssl/doc/crypto/ERR_clear_error.pod
+#	renamed:    docs/openssl/crypto/ERR_error_string.pod -> docs/openssl/doc/crypto/ERR_error_string.pod
+#	renamed:    docs/openssl/crypto/ERR_get_error.pod -> docs/openssl/doc/crypto/ERR_get_error.pod
+#	renamed:    docs/openssl/crypto/ERR_load_crypto_strings.pod -> docs/openssl/doc/crypto/ERR_load_crypto_strings.pod
+#	renamed:    docs/openssl/crypto/ERR_load_strings.pod -> docs/openssl/doc/crypto/ERR_load_strings.pod
+#	renamed:    docs/openssl/crypto/ERR_print_errors.pod -> docs/openssl/doc/crypto/ERR_print_errors.pod
+#	renamed:    docs/openssl/crypto/ERR_put_error.pod -> docs/openssl/doc/crypto/ERR_put_error.pod
+#	renamed:    docs/openssl/crypto/ERR_remove_state.pod -> docs/openssl/doc/crypto/ERR_remove_state.pod
+#	renamed:    docs/openssl/crypto/ERR_set_mark.pod -> docs/openssl/doc/crypto/ERR_set_mark.pod
+#	renamed:    docs/openssl/crypto/EVP_BytesToKey.pod -> docs/openssl/doc/crypto/EVP_BytesToKey.pod
+#	renamed:    docs/openssl/crypto/EVP_DigestInit.pod -> docs/openssl/doc/crypto/EVP_DigestInit.pod
+#	renamed:    docs/openssl/crypto/EVP_DigestSignInit.pod -> docs/openssl/doc/crypto/EVP_DigestSignInit.pod
+#	renamed:    docs/openssl/crypto/EVP_DigestVerifyInit.pod -> docs/openssl/doc/crypto/EVP_DigestVerifyInit.pod
+#	renamed:    docs/openssl/crypto/EVP_EncryptInit.pod -> docs/openssl/doc/crypto/EVP_EncryptInit.pod
+#	renamed:    docs/openssl/crypto/EVP_OpenInit.pod -> docs/openssl/doc/crypto/EVP_OpenInit.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_CTX_ctrl.pod -> docs/openssl/doc/crypto/EVP_PKEY_CTX_ctrl.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_CTX_new.pod -> docs/openssl/doc/crypto/EVP_PKEY_CTX_new.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_cmp.pod -> docs/openssl/doc/crypto/EVP_PKEY_cmp.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_decrypt.pod -> docs/openssl/doc/crypto/EVP_PKEY_decrypt.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_derive.pod -> docs/openssl/doc/crypto/EVP_PKEY_derive.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_encrypt.pod -> docs/openssl/doc/crypto/EVP_PKEY_encrypt.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_get_default_digest.pod -> docs/openssl/doc/crypto/EVP_PKEY_get_default_digest.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_keygen.pod -> docs/openssl/doc/crypto/EVP_PKEY_keygen.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_new.pod -> docs/openssl/doc/crypto/EVP_PKEY_new.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_print_private.pod -> docs/openssl/doc/crypto/EVP_PKEY_print_private.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_set1_RSA.pod -> docs/openssl/doc/crypto/EVP_PKEY_set1_RSA.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_sign.pod -> docs/openssl/doc/crypto/EVP_PKEY_sign.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_verify.pod -> docs/openssl/doc/crypto/EVP_PKEY_verify.pod
+#	renamed:    docs/openssl/crypto/EVP_PKEY_verify_recover.pod -> docs/openssl/doc/crypto/EVP_PKEY_verify_recover.pod
+#	renamed:    docs/openssl/crypto/EVP_SealInit.pod -> docs/openssl/doc/crypto/EVP_SealInit.pod
+#	renamed:    docs/openssl/crypto/EVP_SignInit.pod -> docs/openssl/doc/crypto/EVP_SignInit.pod
+#	renamed:    docs/openssl/crypto/EVP_VerifyInit.pod -> docs/openssl/doc/crypto/EVP_VerifyInit.pod
+#	renamed:    docs/openssl/crypto/OBJ_nid2obj.pod -> docs/openssl/doc/crypto/OBJ_nid2obj.pod
+#	renamed:    docs/openssl/crypto/OPENSSL_Applink.pod -> docs/openssl/doc/crypto/OPENSSL_Applink.pod
+#	renamed:    docs/openssl/crypto/OPENSSL_VERSION_NUMBER.pod -> docs/openssl/doc/crypto/OPENSSL_VERSION_NUMBER.pod
+#	renamed:    docs/openssl/crypto/OPENSSL_config.pod -> docs/openssl/doc/crypto/OPENSSL_config.pod
+#	renamed:    docs/openssl/crypto/OPENSSL_ia32cap.pod -> docs/openssl/doc/crypto/OPENSSL_ia32cap.pod
+#	renamed:    docs/openssl/crypto/OPENSSL_load_builtin_modules.pod -> docs/openssl/doc/crypto/OPENSSL_load_builtin_modules.pod
+#	renamed:    docs/openssl/crypto/OpenSSL_add_all_algorithms.pod -> docs/openssl/doc/crypto/OpenSSL_add_all_algorithms.pod
+#	renamed:    docs/openssl/crypto/PEM_write_bio_CMS_stream.pod -> docs/openssl/doc/crypto/PEM_write_bio_CMS_stream.pod
+#	renamed:    docs/openssl/crypto/PEM_write_bio_PKCS7_stream.pod -> docs/openssl/doc/crypto/PEM_write_bio_PKCS7_stream.pod
+#	renamed:    docs/openssl/crypto/PKCS12_create.pod -> docs/openssl/doc/crypto/PKCS12_create.pod
+#	renamed:    docs/openssl/crypto/PKCS12_parse.pod -> docs/openssl/doc/crypto/PKCS12_parse.pod
+#	renamed:    docs/openssl/crypto/PKCS7_decrypt.pod -> docs/openssl/doc/crypto/PKCS7_decrypt.pod
+#	renamed:    docs/openssl/crypto/PKCS7_encrypt.pod -> docs/openssl/doc/crypto/PKCS7_encrypt.pod
+#	renamed:    docs/openssl/crypto/PKCS7_sign.pod -> docs/openssl/doc/crypto/PKCS7_sign.pod
+#	renamed:    docs/openssl/crypto/PKCS7_sign_add_signer.pod -> docs/openssl/doc/crypto/PKCS7_sign_add_signer.pod
+#	renamed:    docs/openssl/crypto/PKCS7_verify.pod -> docs/openssl/doc/crypto/PKCS7_verify.pod
+#	renamed:    docs/openssl/crypto/RAND_add.pod -> docs/openssl/doc/crypto/RAND_add.pod
+#	renamed:    docs/openssl/crypto/RAND_bytes.pod -> docs/openssl/doc/crypto/RAND_bytes.pod
+#	renamed:    docs/openssl/crypto/RAND_cleanup.pod -> docs/openssl/doc/crypto/RAND_cleanup.pod
+#	renamed:    docs/openssl/crypto/RAND_egd.pod -> docs/openssl/doc/crypto/RAND_egd.pod
+#	renamed:    docs/openssl/crypto/RAND_load_file.pod -> docs/openssl/doc/crypto/RAND_load_file.pod
+#	renamed:    docs/openssl/crypto/RAND_set_rand_method.pod -> docs/openssl/doc/crypto/RAND_set_rand_method.pod
+#	renamed:    docs/openssl/crypto/RSA_blinding_on.pod -> docs/openssl/doc/crypto/RSA_blinding_on.pod
+#	renamed:    docs/openssl/crypto/RSA_check_key.pod -> docs/openssl/doc/crypto/RSA_check_key.pod
+#	renamed:    docs/openssl/crypto/RSA_generate_key.pod -> docs/openssl/doc/crypto/RSA_generate_key.pod
+#	renamed:    docs/openssl/crypto/RSA_get_ex_new_index.pod -> docs/openssl/doc/crypto/RSA_get_ex_new_index.pod
+#	renamed:    docs/openssl/crypto/RSA_new.pod -> docs/openssl/doc/crypto/RSA_new.pod
+#	renamed:    docs/openssl/crypto/RSA_padding_add_PKCS1_type_1.pod -> docs/openssl/doc/crypto/RSA_padding_add_PKCS1_type_1.pod
+#	renamed:    docs/openssl/crypto/RSA_print.pod -> docs/openssl/doc/crypto/RSA_print.pod
+#	renamed:    docs/openssl/crypto/RSA_private_encrypt.pod -> docs/openssl/doc/crypto/RSA_private_encrypt.pod
+#	renamed:    docs/openssl/crypto/RSA_public_encrypt.pod -> docs/openssl/doc/crypto/RSA_public_encrypt.pod
+#	renamed:    docs/openssl/crypto/RSA_set_method.pod -> docs/openssl/doc/crypto/RSA_set_method.pod
+#	renamed:    docs/openssl/crypto/RSA_sign.pod -> docs/openssl/doc/crypto/RSA_sign.pod
+#	renamed:    docs/openssl/crypto/RSA_sign_ASN1_OCTET_STRING.pod -> docs/openssl/doc/crypto/RSA_sign_ASN1_OCTET_STRING.pod
+#	renamed:    docs/openssl/crypto/RSA_size.pod -> docs/openssl/doc/crypto/RSA_size.pod
+#	renamed:    docs/openssl/crypto/SMIME_read_CMS.pod -> docs/openssl/doc/crypto/SMIME_read_CMS.pod
+#	renamed:    docs/openssl/crypto/SMIME_read_PKCS7.pod -> docs/openssl/doc/crypto/SMIME_read_PKCS7.pod
+#	renamed:    docs/openssl/crypto/SMIME_write_CMS.pod -> docs/openssl/doc/crypto/SMIME_write_CMS.pod
+#	renamed:    docs/openssl/crypto/SMIME_write_PKCS7.pod -> docs/openssl/doc/crypto/SMIME_write_PKCS7.pod
+#	renamed:    docs/openssl/crypto/X509_NAME_ENTRY_get_object.pod -> docs/openssl/doc/crypto/X509_NAME_ENTRY_get_object.pod
+#	renamed:    docs/openssl/crypto/X509_NAME_add_entry_by_txt.pod -> docs/openssl/doc/crypto/X509_NAME_add_entry_by_txt.pod
+#	renamed:    docs/openssl/crypto/X509_NAME_get_index_by_NID.pod -> docs/openssl/doc/crypto/X509_NAME_get_index_by_NID.pod
+#	renamed:    docs/openssl/crypto/X509_NAME_print_ex.pod -> docs/openssl/doc/crypto/X509_NAME_print_ex.pod
+#	renamed:    docs/openssl/crypto/X509_STORE_CTX_get_error.pod -> docs/openssl/doc/crypto/X509_STORE_CTX_get_error.pod
+#	renamed:    docs/openssl/crypto/X509_STORE_CTX_get_ex_new_index.pod -> docs/openssl/doc/crypto/X509_STORE_CTX_get_ex_new_index.pod
+#	renamed:    docs/openssl/crypto/X509_STORE_CTX_new.pod -> docs/openssl/doc/crypto/X509_STORE_CTX_new.pod
+#	renamed:    docs/openssl/crypto/X509_STORE_CTX_set_verify_cb.pod -> docs/openssl/doc/crypto/X509_STORE_CTX_set_verify_cb.pod
+#	renamed:    docs/openssl/crypto/X509_STORE_set_verify_cb_func.pod -> docs/openssl/doc/crypto/X509_STORE_set_verify_cb_func.pod
+#	renamed:    docs/openssl/crypto/X509_VERIFY_PARAM_set_flags.pod -> docs/openssl/doc/crypto/X509_VERIFY_PARAM_set_flags.pod
+#	renamed:    docs/openssl/crypto/X509_new.pod -> docs/openssl/doc/crypto/X509_new.pod
+#	renamed:    docs/openssl/crypto/X509_verify_cert.pod -> docs/openssl/doc/crypto/X509_verify_cert.pod
+#	renamed:    docs/openssl/crypto/bio.pod -> docs/openssl/doc/crypto/bio.pod
+#	renamed:    docs/openssl/crypto/blowfish.pod -> docs/openssl/doc/crypto/blowfish.pod
+#	renamed:    docs/openssl/crypto/bn.pod -> docs/openssl/doc/crypto/bn.pod
+#	renamed:    docs/openssl/crypto/bn_internal.pod -> docs/openssl/doc/crypto/bn_internal.pod
+#	renamed:    docs/openssl/crypto/buffer.pod -> docs/openssl/doc/crypto/buffer.pod
+#	renamed:    docs/openssl/crypto/crypto.pod -> docs/openssl/doc/crypto/crypto.pod
+#	renamed:    docs/openssl/crypto/d2i_ASN1_OBJECT.pod -> docs/openssl/doc/crypto/d2i_ASN1_OBJECT.pod
+#	renamed:    docs/openssl/crypto/d2i_DHparams.pod -> docs/openssl/doc/crypto/d2i_DHparams.pod
+#	renamed:    docs/openssl/crypto/d2i_DSAPublicKey.pod -> docs/openssl/doc/crypto/d2i_DSAPublicKey.pod
+#	renamed:    docs/openssl/crypto/d2i_PKCS8PrivateKey.pod -> docs/openssl/doc/crypto/d2i_PKCS8PrivateKey.pod
+#	renamed:    docs/openssl/crypto/d2i_RSAPublicKey.pod -> docs/openssl/doc/crypto/d2i_RSAPublicKey.pod
+#	renamed:    docs/openssl/crypto/d2i_X509.pod -> docs/openssl/doc/crypto/d2i_X509.pod
+#	renamed:    docs/openssl/crypto/d2i_X509_ALGOR.pod -> docs/openssl/doc/crypto/d2i_X509_ALGOR.pod
+#	renamed:    docs/openssl/crypto/d2i_X509_CRL.pod -> docs/openssl/doc/crypto/d2i_X509_CRL.pod
+#	renamed:    docs/openssl/crypto/d2i_X509_NAME.pod -> docs/openssl/doc/crypto/d2i_X509_NAME.pod
+#	renamed:    docs/openssl/crypto/d2i_X509_REQ.pod -> docs/openssl/doc/crypto/d2i_X509_REQ.pod
+#	renamed:    docs/openssl/crypto/d2i_X509_SIG.pod -> docs/openssl/doc/crypto/d2i_X509_SIG.pod
+#	renamed:    docs/openssl/crypto/des.pod -> docs/openssl/doc/crypto/des.pod
+#	renamed:    docs/openssl/crypto/des_modes.pod -> docs/openssl/doc/crypto/des_modes.pod
+#	renamed:    docs/openssl/crypto/dh.pod -> docs/openssl/doc/crypto/dh.pod
+#	renamed:    docs/openssl/crypto/dsa.pod -> docs/openssl/doc/crypto/dsa.pod
+#	renamed:    docs/openssl/crypto/ecdsa.pod -> docs/openssl/doc/crypto/ecdsa.pod
+#	renamed:    docs/openssl/crypto/engine.pod -> docs/openssl/doc/crypto/engine.pod
+#	renamed:    docs/openssl/crypto/err.pod -> docs/openssl/doc/crypto/err.pod
+#	renamed:    docs/openssl/crypto/evp.pod -> docs/openssl/doc/crypto/evp.pod
+#	renamed:    docs/openssl/crypto/hmac.pod -> docs/openssl/doc/crypto/hmac.pod
+#	renamed:    docs/openssl/crypto/i2d_CMS_bio_stream.pod -> docs/openssl/doc/crypto/i2d_CMS_bio_stream.pod
+#	renamed:    docs/openssl/crypto/i2d_PKCS7_bio_stream.pod -> docs/openssl/doc/crypto/i2d_PKCS7_bio_stream.pod
+#	renamed:    docs/openssl/crypto/lh_stats.pod -> docs/openssl/doc/crypto/lh_stats.pod
+#	renamed:    docs/openssl/crypto/lhash.pod -> docs/openssl/doc/crypto/lhash.pod
+#	renamed:    docs/openssl/crypto/md5.pod -> docs/openssl/doc/crypto/md5.pod
+#	renamed:    docs/openssl/crypto/mdc2.pod -> docs/openssl/doc/crypto/mdc2.pod
+#	renamed:    docs/openssl/crypto/pem.pod -> docs/openssl/doc/crypto/pem.pod
+#	renamed:    docs/openssl/crypto/rand.pod -> docs/openssl/doc/crypto/rand.pod
+#	renamed:    docs/openssl/crypto/rc4.pod -> docs/openssl/doc/crypto/rc4.pod
+#	renamed:    docs/openssl/crypto/ripemd.pod -> docs/openssl/doc/crypto/ripemd.pod
+#	renamed:    docs/openssl/crypto/rsa.pod -> docs/openssl/doc/crypto/rsa.pod
+#	renamed:    docs/openssl/crypto/sha.pod -> docs/openssl/doc/crypto/sha.pod
+#	renamed:    docs/openssl/crypto/threads.pod -> docs/openssl/doc/crypto/threads.pod
+#	renamed:    docs/openssl/crypto/ui.pod -> docs/openssl/doc/crypto/ui.pod
+#	renamed:    docs/openssl/crypto/ui_compat.pod -> docs/openssl/doc/crypto/ui_compat.pod
+#	renamed:    docs/openssl/crypto/x509.pod -> docs/openssl/doc/crypto/x509.pod
+#	renamed:    docs/openssl/fingerprints.txt -> docs/openssl/doc/fingerprints.txt
+#	renamed:    docs/openssl/openssl-shared.txt -> docs/openssl/doc/openssl-shared.txt
+#	renamed:    docs/openssl/openssl.txt -> docs/openssl/doc/openssl.txt
+#	renamed:    docs/openssl/openssl_button.gif -> docs/openssl/doc/openssl_button.gif
+#	renamed:    docs/openssl/openssl_button.html -> docs/openssl/doc/openssl_button.html
+#	renamed:    docs/openssl/ssl/SSL_CIPHER_get_name.pod -> docs/openssl/doc/ssl/SSL_CIPHER_get_name.pod
+#	renamed:    docs/openssl/ssl/SSL_COMP_add_compression_method.pod -> docs/openssl/doc/ssl/SSL_COMP_add_compression_method.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_add_extra_chain_cert.pod -> docs/openssl/doc/ssl/SSL_CTX_add_extra_chain_cert.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_add_session.pod -> docs/openssl/doc/ssl/SSL_CTX_add_session.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_ctrl.pod -> docs/openssl/doc/ssl/SSL_CTX_ctrl.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_flush_sessions.pod -> docs/openssl/doc/ssl/SSL_CTX_flush_sessions.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_free.pod -> docs/openssl/doc/ssl/SSL_CTX_free.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_get_ex_new_index.pod -> docs/openssl/doc/ssl/SSL_CTX_get_ex_new_index.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_get_verify_mode.pod -> docs/openssl/doc/ssl/SSL_CTX_get_verify_mode.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_load_verify_locations.pod -> docs/openssl/doc/ssl/SSL_CTX_load_verify_locations.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_new.pod -> docs/openssl/doc/ssl/SSL_CTX_new.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_sess_number.pod -> docs/openssl/doc/ssl/SSL_CTX_sess_number.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_sess_set_cache_size.pod -> docs/openssl/doc/ssl/SSL_CTX_sess_set_cache_size.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_sess_set_get_cb.pod -> docs/openssl/doc/ssl/SSL_CTX_sess_set_get_cb.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_sessions.pod -> docs/openssl/doc/ssl/SSL_CTX_sessions.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_cert_store.pod -> docs/openssl/doc/ssl/SSL_CTX_set_cert_store.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_cert_verify_callback.pod -> docs/openssl/doc/ssl/SSL_CTX_set_cert_verify_callback.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_cipher_list.pod -> docs/openssl/doc/ssl/SSL_CTX_set_cipher_list.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_client_CA_list.pod -> docs/openssl/doc/ssl/SSL_CTX_set_client_CA_list.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_client_cert_cb.pod -> docs/openssl/doc/ssl/SSL_CTX_set_client_cert_cb.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_default_passwd_cb.pod -> docs/openssl/doc/ssl/SSL_CTX_set_default_passwd_cb.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_generate_session_id.pod -> docs/openssl/doc/ssl/SSL_CTX_set_generate_session_id.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_info_callback.pod -> docs/openssl/doc/ssl/SSL_CTX_set_info_callback.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_max_cert_list.pod -> docs/openssl/doc/ssl/SSL_CTX_set_max_cert_list.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_mode.pod -> docs/openssl/doc/ssl/SSL_CTX_set_mode.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_msg_callback.pod -> docs/openssl/doc/ssl/SSL_CTX_set_msg_callback.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_options.pod -> docs/openssl/doc/ssl/SSL_CTX_set_options.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_psk_client_callback.pod -> docs/openssl/doc/ssl/SSL_CTX_set_psk_client_callback.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_quiet_shutdown.pod -> docs/openssl/doc/ssl/SSL_CTX_set_quiet_shutdown.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_session_cache_mode.pod -> docs/openssl/doc/ssl/SSL_CTX_set_session_cache_mode.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_session_id_context.pod -> docs/openssl/doc/ssl/SSL_CTX_set_session_id_context.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_ssl_version.pod -> docs/openssl/doc/ssl/SSL_CTX_set_ssl_version.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_timeout.pod -> docs/openssl/doc/ssl/SSL_CTX_set_timeout.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_tmp_dh_callback.pod -> docs/openssl/doc/ssl/SSL_CTX_set_tmp_dh_callback.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_tmp_rsa_callback.pod -> docs/openssl/doc/ssl/SSL_CTX_set_tmp_rsa_callback.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_set_verify.pod -> docs/openssl/doc/ssl/SSL_CTX_set_verify.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_use_certificate.pod -> docs/openssl/doc/ssl/SSL_CTX_use_certificate.pod
+#	renamed:    docs/openssl/ssl/SSL_CTX_use_psk_identity_hint.pod -> docs/openssl/doc/ssl/SSL_CTX_use_psk_identity_hint.pod
+#	renamed:    docs/openssl/ssl/SSL_SESSION_free.pod -> docs/openssl/doc/ssl/SSL_SESSION_free.pod
+#	renamed:    docs/openssl/ssl/SSL_SESSION_get_ex_new_index.pod -> docs/openssl/doc/ssl/SSL_SESSION_get_ex_new_index.pod
+#	renamed:    docs/openssl/ssl/SSL_SESSION_get_time.pod -> docs/openssl/doc/ssl/SSL_SESSION_get_time.pod
+#	renamed:    docs/openssl/ssl/SSL_accept.pod -> docs/openssl/doc/ssl/SSL_accept.pod
+#	renamed:    docs/openssl/ssl/SSL_alert_type_string.pod -> docs/openssl/doc/ssl/SSL_alert_type_string.pod
+#	renamed:    docs/openssl/ssl/SSL_clear.pod -> docs/openssl/doc/ssl/SSL_clear.pod
+#	renamed:    docs/openssl/ssl/SSL_connect.pod -> docs/openssl/doc/ssl/SSL_connect.pod
+#	renamed:    docs/openssl/ssl/SSL_do_handshake.pod -> docs/openssl/doc/ssl/SSL_do_handshake.pod
+#	renamed:    docs/openssl/ssl/SSL_free.pod -> docs/openssl/doc/ssl/SSL_free.pod
+#	renamed:    docs/openssl/ssl/SSL_get_SSL_CTX.pod -> docs/openssl/doc/ssl/SSL_get_SSL_CTX.pod
+#	renamed:    docs/openssl/ssl/SSL_get_ciphers.pod -> docs/openssl/doc/ssl/SSL_get_ciphers.pod
+#	renamed:    docs/openssl/ssl/SSL_get_client_CA_list.pod -> docs/openssl/doc/ssl/SSL_get_client_CA_list.pod
+#	renamed:    docs/openssl/ssl/SSL_get_current_cipher.pod -> docs/openssl/doc/ssl/SSL_get_current_cipher.pod
+#	renamed:    docs/openssl/ssl/SSL_get_default_timeout.pod -> docs/openssl/doc/ssl/SSL_get_default_timeout.pod
+#	renamed:    docs/openssl/ssl/SSL_get_error.pod -> docs/openssl/doc/ssl/SSL_get_error.pod
+#	renamed:    docs/openssl/ssl/SSL_get_ex_data_X509_STORE_CTX_idx.pod -> docs/openssl/doc/ssl/SSL_get_ex_data_X509_STORE_CTX_idx.pod
+#	renamed:    docs/openssl/ssl/SSL_get_ex_new_index.pod -> docs/openssl/doc/ssl/SSL_get_ex_new_index.pod
+#	renamed:    docs/openssl/ssl/SSL_get_fd.pod -> docs/openssl/doc/ssl/SSL_get_fd.pod
+#	renamed:    docs/openssl/ssl/SSL_get_peer_cert_chain.pod -> docs/openssl/doc/ssl/SSL_get_peer_cert_chain.pod
+#	renamed:    docs/openssl/ssl/SSL_get_peer_certificate.pod -> docs/openssl/doc/ssl/SSL_get_peer_certificate.pod
+#	renamed:    docs/openssl/ssl/SSL_get_psk_identity.pod -> docs/openssl/doc/ssl/SSL_get_psk_identity.pod
+#	renamed:    docs/openssl/ssl/SSL_get_rbio.pod -> docs/openssl/doc/ssl/SSL_get_rbio.pod
+#	renamed:    docs/openssl/ssl/SSL_get_session.pod -> docs/openssl/doc/ssl/SSL_get_session.pod
+#	renamed:    docs/openssl/ssl/SSL_get_verify_result.pod -> docs/openssl/doc/ssl/SSL_get_verify_result.pod
+#	renamed:    docs/openssl/ssl/SSL_get_version.pod -> docs/openssl/doc/ssl/SSL_get_version.pod
+#	renamed:    docs/openssl/ssl/SSL_library_init.pod -> docs/openssl/doc/ssl/SSL_library_init.pod
+#	renamed:    docs/openssl/ssl/SSL_load_client_CA_file.pod -> docs/openssl/doc/ssl/SSL_load_client_CA_file.pod
+#	renamed:    docs/openssl/ssl/SSL_new.pod -> docs/openssl/doc/ssl/SSL_new.pod
+#	renamed:    docs/openssl/ssl/SSL_pending.pod -> docs/openssl/doc/ssl/SSL_pending.pod
+#	renamed:    docs/openssl/ssl/SSL_read.pod -> docs/openssl/doc/ssl/SSL_read.pod
+#	renamed:    docs/openssl/ssl/SSL_rstate_string.pod -> docs/openssl/doc/ssl/SSL_rstate_string.pod
+#	renamed:    docs/openssl/ssl/SSL_session_reused.pod -> docs/openssl/doc/ssl/SSL_session_reused.pod
+#	renamed:    docs/openssl/ssl/SSL_set_bio.pod -> docs/openssl/doc/ssl/SSL_set_bio.pod
+#	renamed:    docs/openssl/ssl/SSL_set_connect_state.pod -> docs/openssl/doc/ssl/SSL_set_connect_state.pod
+#	renamed:    docs/openssl/ssl/SSL_set_fd.pod -> docs/openssl/doc/ssl/SSL_set_fd.pod
+#	renamed:    docs/openssl/ssl/SSL_set_session.pod -> docs/openssl/doc/ssl/SSL_set_session.pod
+#	renamed:    docs/openssl/ssl/SSL_set_shutdown.pod -> docs/openssl/doc/ssl/SSL_set_shutdown.pod
+#	renamed:    docs/openssl/ssl/SSL_set_verify_result.pod -> docs/openssl/doc/ssl/SSL_set_verify_result.pod
+#	renamed:    docs/openssl/ssl/SSL_shutdown.pod -> docs/openssl/doc/ssl/SSL_shutdown.pod
+#	renamed:    docs/openssl/ssl/SSL_state_string.pod -> docs/openssl/doc/ssl/SSL_state_string.pod
+#	renamed:    docs/openssl/ssl/SSL_want.pod -> docs/openssl/doc/ssl/SSL_want.pod
+#	renamed:    docs/openssl/ssl/SSL_write.pod -> docs/openssl/doc/ssl/SSL_write.pod
+#	renamed:    docs/openssl/ssl/d2i_SSL_SESSION.pod -> docs/openssl/doc/ssl/d2i_SSL_SESSION.pod
+#	renamed:    docs/openssl/ssl/ssl.pod -> docs/openssl/doc/ssl/ssl.pod
+#	renamed:    docs/openssl/ssleay.txt -> docs/openssl/doc/ssleay.txt
+#	renamed:    docs/openssl/standards.txt -> docs/openssl/doc/standards.txt
+#	renamed:    code/external/zlib/examples/README.examples -> docs/zlib/examples/README.examples
+#	renamed:    code/external/zlib/examples/enough.c -> docs/zlib/examples/enough.c
+#	renamed:    code/external/zlib/examples/fitblk.c -> docs/zlib/examples/fitblk.c
+#	renamed:    code/external/zlib/examples/gun.c -> docs/zlib/examples/gun.c
+#	renamed:    code/external/zlib/examples/gzappend.c -> docs/zlib/examples/gzappend.c
+#	renamed:    code/external/zlib/examples/gzjoin.c -> docs/zlib/examples/gzjoin.c
+#	renamed:    code/external/zlib/examples/gzlog.c -> docs/zlib/examples/gzlog.c
+#	renamed:    code/external/zlib/examples/gzlog.h -> docs/zlib/examples/gzlog.h
+#	renamed:    code/external/zlib/examples/zlib_how.html -> docs/zlib/examples/zlib_how.html
+#	renamed:    code/external/zlib/examples/zpipe.c -> docs/zlib/examples/zpipe.c
+#	renamed:    code/external/zlib/examples/zran.c -> docs/zlib/examples/zran.c
+#	renamed:    code/external/zlib/test/example.c -> docs/zlib/test/example.c
+#	renamed:    code/external/zlib/test/infcover.c -> docs/zlib/test/infcover.c
+#	renamed:    code/external/zlib/test/minigzip.c -> docs/zlib/test/minigzip.c
+#	new file:   libs/libtomcrypt/linux-x86_64/libtomcrypt.a
+#	new file:   libs/luacrypto/linux-x86_64/libluacrypto.a
+#	new file:   libs/luasec/linux-x86_64/libluasec.a
+#	deleted:    libs/luasec/linux-x86_64/luasec.a
+#	new file:   libs/luasocket/linux-x86_64/libluasocket.a
+#	deleted:    libs/luasocket/lunux-x86_64/luasocket.a
+#	renamed:    libs/luasys/linux-x86_64/luasys.a -> libs/luasys/linux-x86_64/libluasys.a
+#	renamed:    libs/luazlib/linux-x86_64/luazlib.a -> libs/luazlib/linux-x86_64/libluazlib.a
+#	modified:   libs/openssl/linux-x86_64/libcrypto.a
+#	modified:   libs/openssl/linux-x86_64/libssl.a
+#	renamed:    libs/zlib/linux-x86_64/zlib.a -> libs/zlib/linux-x86_64/libzlib.a
+#	new file:   samples/misc/luacrypto_test/luacrypto.cpp
+#	new file:   samples/misc/luacrypto_test/luacrypto.pro
+#	modified:   samples/misc/luasec_test/luasec.pro
+#	modified:   samples/misc/luasock_test/luasock.pro
+#	new file:   samples/misc/luasock_test/luasock.pro.user
+#	modified:   samples/misc/luasys_test/luasys.pro
+#	modified:   samples/misc/luaviton_test/luaviton.pro
+#	modified:   samples/misc/luazlib_test/luazlib.pro
+#
