@@ -21,10 +21,6 @@
 	;; "modes/nxml"
 	"modes/ruby"
 	"modes/python-mode"
-	"coding/auto-complete"
-		  "modes/scss-mode"
-		  "moeds/ace-jump-mode"
-		  "coding/emacs-eclim"
 	;; "modes/pymacs"							  
 	;; "modes/mirah"
 	;; "modes/js2-mode"
@@ -32,6 +28,10 @@
 	"coding/yasnippet"
 		  ;; "coding/git-contrib"
 		  ;; "coding/egit"
+    "coding/auto-complete"
+		  "modes/scss-mode"
+		  "moeds/ace-jump-mode"
+		  "coding/emacs-eclim"
 	"coding/magit"
 	;; "coding/mo-git-blame"
 	;; "internet/twitter"
@@ -81,6 +81,10 @@
     ;; "core/server"
 		  ;; "core/edit-server"
 ))
+
+;; AUCTEX mode: apt-get install auctex
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
 
 (null-config)
 (null-help)
