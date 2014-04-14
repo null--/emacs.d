@@ -18,6 +18,7 @@
 	"interface/ido"
 	"interface/ibuffer"
 	"interface/hippie-expand"
+	"interface/xclip"
 	;; "modes/nxml"
 	"modes/ruby"
 	"modes/python-mode"
